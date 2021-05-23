@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/experimental-font-dna/static/css/main.f7ea60e3.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.9e26a247.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.9e26a247.chunk.js.map",
+    "main.js": "/experimental-font-dna/static/js/main.cd36eb51.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.cd36eb51.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.2199c672.js",
     "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.2199c672.js.map",
-    "static/js/2.2713991f.chunk.js": "/experimental-font-dna/static/js/2.2713991f.chunk.js",
-    "static/js/2.2713991f.chunk.js.map": "/experimental-font-dna/static/js/2.2713991f.chunk.js.map",
+    "static/js/2.71128fa5.chunk.js": "/experimental-font-dna/static/js/2.71128fa5.chunk.js",
+    "static/js/2.71128fa5.chunk.js.map": "/experimental-font-dna/static/js/2.71128fa5.chunk.js.map",
     "static/js/3.9f36e6e6.chunk.js": "/experimental-font-dna/static/js/3.9f36e6e6.chunk.js",
     "static/js/3.9f36e6e6.chunk.js.map": "/experimental-font-dna/static/js/3.9f36e6e6.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
     "static/css/main.f7ea60e3.chunk.css.map": "/experimental-font-dna/static/css/main.f7ea60e3.chunk.css.map",
-    "static/js/2.2713991f.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.2713991f.chunk.js.LICENSE.txt"
+    "static/js/2.71128fa5.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.71128fa5.chunk.js.LICENSE.txt",
+    "static/media/genetic_processes.81f809c0.mp4": "/experimental-font-dna/static/media/genetic_processes.81f809c0.mp4",
+    "static/media/genetic_processes.fa9adaed.ogg": "/experimental-font-dna/static/media/genetic_processes.fa9adaed.ogg"
   },
   "entrypoints": [
     "static/js/runtime-main.2199c672.js",
-    "static/js/2.2713991f.chunk.js",
+    "static/js/2.71128fa5.chunk.js",
     "static/css/main.f7ea60e3.chunk.css",
-    "static/js/main.9e26a247.chunk.js"
+    "static/js/main.cd36eb51.chunk.js"
   ]
 }
