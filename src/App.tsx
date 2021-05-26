@@ -9,8 +9,6 @@ import { PageTransition } from "components/PageTransition/PageTransition";
 
 import { PATH } from "constants/paths";
 
-import { Canvas } from "./canvas/Canvas";
-
 import styles from "./App.module.scss";
 
 const App: React.FC = () => {
@@ -28,10 +26,7 @@ const App: React.FC = () => {
               <HomePage />
             </Route>
             <Route path={PATH.ALPHABET}>
-              <div>
-                Abėcelė page
-                <Canvas />
-              </div>
+              <div>Abėcelė page</div>
             </Route>
             <Route path={PATH.GENOME_FONT}>
               <div>Genomo šriftas page</div>
