@@ -1,0 +1,24 @@
+@import "styles/scss-vars.scss";
+
+.container {
+  display: flex;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-top: $spacer-xxl;
+  }
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .video {
+    width: 100%;
+    margin: auto;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      width: 82%;
+    }
+  }
+}
