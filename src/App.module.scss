@@ -1,0 +1,9 @@
+@import "styles/element-vars.scss";
+
+.section {
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}
+
+.home-page-section {
+  min-height: calc(100vh - #{$header-height});
+}
