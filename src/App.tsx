@@ -6,6 +6,7 @@ import { HomePage } from "components/HomePage/HomePage";
 import { Footer } from "components/Footer/Footer";
 import { PageBackground } from "components/PageBackground/PageBackground";
 import { PageTransition } from "components/PageTransition/PageTransition";
+import { About } from "components/About/About";
 
 import { PATH } from "constants/paths";
 
@@ -32,7 +33,7 @@ const App: React.FC = () => {
               <div>Genomo šriftas page</div>
             </Route>
             <Route path={PATH.ABOUT}>
-              <div>Apie page</div>
+              <About />
             </Route>
             <Route render={() => <Redirect to={PATH.HOME} />} />
           </Switch>

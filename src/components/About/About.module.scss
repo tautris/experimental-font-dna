@@ -1,0 +1,54 @@
+@import "styles/scss-vars.scss";
+
+.container {
+  padding-bottom: $spacer-xxl;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 75%;
+  }
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    padding-left: $spacer-xxl;
+    padding-right: $spacer-xxl;
+    width: min-content;
+  }
+
+  @media only screen and (min-width: $breakpoint-large-desktop) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .heading {
+    font-size: 30px;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 65px;
+    }
+
+    @media only screen and (min-width: $breakpoint-large-desktop) {
+      font-size: 120px;
+      line-height: 143px;
+    }
+  }
+
+  .paragraph {
+    margin: 0;
+    font-size: 16px;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    i {
+      font-weight: normal;
+    }
+
+    &:not(:first-of-type) {
+      padding-top: $spacer-l;
+    }
+  }
+}
