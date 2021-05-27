@@ -2,8 +2,9 @@
 
 .footer {
   display: flex;
-  padding: $spacer-m $spacer-l $spacer-m;
+  padding: $spacer-m $spacer-xl $spacer-m;
   font-size: 12px;
+  color: $color-white;
 
   .email {
     margin-left: auto;
