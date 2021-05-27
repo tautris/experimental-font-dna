@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/experimental-font-dna/static/css/main.3059882f.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.fae7de2a.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.fae7de2a.chunk.js.map",
-    "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.a72bfd31.js",
-    "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.a72bfd31.js.map",
-    "static/js/2.a56e19f9.chunk.js": "/experimental-font-dna/static/js/2.a56e19f9.chunk.js",
-    "static/js/2.a56e19f9.chunk.js.map": "/experimental-font-dna/static/js/2.a56e19f9.chunk.js.map",
-    "static/js/3.94c77dcc.chunk.js": "/experimental-font-dna/static/js/3.94c77dcc.chunk.js",
-    "static/js/3.94c77dcc.chunk.js.map": "/experimental-font-dna/static/js/3.94c77dcc.chunk.js.map",
+    "main.css": "/experimental-font-dna/static/css/main.ef5559e8.chunk.css",
+    "main.js": "/experimental-font-dna/static/js/main.5d6e7bfa.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.5d6e7bfa.chunk.js.map",
+    "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.b2dbb3a9.js",
+    "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.b2dbb3a9.js.map",
+    "static/js/2.e9584207.chunk.js": "/experimental-font-dna/static/js/2.e9584207.chunk.js",
+    "static/js/2.e9584207.chunk.js.map": "/experimental-font-dna/static/js/2.e9584207.chunk.js.map",
+    "static/js/3.77e7982f.chunk.js": "/experimental-font-dna/static/js/3.77e7982f.chunk.js",
+    "static/js/3.77e7982f.chunk.js.map": "/experimental-font-dna/static/js/3.77e7982f.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
-    "static/css/main.3059882f.chunk.css.map": "/experimental-font-dna/static/css/main.3059882f.chunk.css.map",
-    "static/js/2.a56e19f9.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.a56e19f9.chunk.js.LICENSE.txt",
+    "static/css/main.ef5559e8.chunk.css.map": "/experimental-font-dna/static/css/main.ef5559e8.chunk.css.map",
+    "static/js/2.e9584207.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.e9584207.chunk.js.LICENSE.txt",
     "static/media/PageBackground.module.scss": "/experimental-font-dna/static/media/background-gradient.b164dcda.png",
     "static/media/genetic_processes.81f809c0.mp4": "/experimental-font-dna/static/media/genetic_processes.81f809c0.mp4",
     "static/media/genetic_processes.fa9adaed.ogg": "/experimental-font-dna/static/media/genetic_processes.fa9adaed.ogg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a72bfd31.js",
-    "static/js/2.a56e19f9.chunk.js",
-    "static/css/main.3059882f.chunk.css",
-    "static/js/main.fae7de2a.chunk.js"
+    "static/js/runtime-main.b2dbb3a9.js",
+    "static/js/2.e9584207.chunk.js",
+    "static/css/main.ef5559e8.chunk.css",
+    "static/js/main.5d6e7bfa.chunk.js"
   ]
 }
