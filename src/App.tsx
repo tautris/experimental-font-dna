@@ -8,6 +8,7 @@ import { PageBackground } from "components/PageBackground/PageBackground";
 import { PageTransition } from "components/PageTransition/PageTransition";
 import { About } from "components/About/About";
 import { Alphabet } from "components/Alphabet/Alphabet";
+import { LetterExposition } from "components/LetterExposition/LetterExposition";
 
 import { PATH } from "constants/paths";
 
@@ -26,6 +27,9 @@ const App: React.FC = () => {
           <Switch>
             <Route path={PATH.HOME} exact={true}>
               <HomePage />
+            </Route>
+            <Route path={PATH.LETTER}>
+              <LetterExposition />
             </Route>
             <Route path={PATH.ALPHABET}>
               <Alphabet />
