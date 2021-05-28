@@ -7,6 +7,7 @@ import { Footer } from "components/Footer/Footer";
 import { PageBackground } from "components/PageBackground/PageBackground";
 import { PageTransition } from "components/PageTransition/PageTransition";
 import { About } from "components/About/About";
+import { Alphabet } from "components/Alphabet/Alphabet";
 
 import { PATH } from "constants/paths";
 
@@ -27,7 +28,7 @@ const App: React.FC = () => {
               <HomePage />
             </Route>
             <Route path={PATH.ALPHABET}>
-              <div>Abėcelė page</div>
+              <Alphabet />
             </Route>
             <Route path={PATH.GENOME_FONT}>
               <div>Genomo šriftas page</div>

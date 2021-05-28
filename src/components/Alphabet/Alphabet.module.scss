@@ -1,0 +1,47 @@
+@import "styles/scss-vars.scss";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    padding-top: 60px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.letter {
+  font-size: 80px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: white;
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    font-size: 100px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: 120px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
