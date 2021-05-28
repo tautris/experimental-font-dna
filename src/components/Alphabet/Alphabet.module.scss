@@ -3,6 +3,9 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   padding-top: 10px;
   padding-left: 40px;
   padding-right: 40px;
