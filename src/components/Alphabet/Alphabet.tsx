@@ -101,16 +101,16 @@ const Alphabet: React.FC = () => {
           <div className={styles.image}>*Bus ikona*</div>
         </div>
 
-        <div className={classNames(styles.mutation, styles["mutation--right"])}>
+        <div className={styles.mutation}>
           <div className={styles.image}>*Bus ikona*</div>
           <div className={styles["mutation-info"]}>
             <div className={styles["mutation-header"]}>
               <div className={styles["mutation-line"]} />
-              <h3 className={styles["mutation-title"]}>
+              <h3 className={classNames(styles["mutation-title"], styles["mutation-title--right"])}>
                 Aplinkos mutagenai, dar kitaip vadinami daugiaveiksmės-kompleksinės ligos
               </h3>
             </div>
-            <p className={styles["mutation-description"]}>
+            <p className={classNames(styles["mutation-description"], styles["mutation-description--right"])}>
               Aplinkos mutagenai - nepaveldimi fenotipo pokyčiai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos
               mutagenas tai esantys veiksniai organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas
               organizmas yra veikiamas aplinkos sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas,
