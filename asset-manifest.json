@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/experimental-font-dna/static/css/main.56596540.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.00f2aab3.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.00f2aab3.chunk.js.map",
+    "main.js": "/experimental-font-dna/static/js/main.0ccbe557.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.0ccbe557.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.6d2b1934.js",
     "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.6d2b1934.js.map",
     "static/js/2.a96d2049.chunk.js": "/experimental-font-dna/static/js/2.a96d2049.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.6d2b1934.js",
     "static/js/2.a96d2049.chunk.js",
     "static/css/main.56596540.chunk.css",
-    "static/js/main.00f2aab3.chunk.js"
+    "static/js/main.0ccbe557.chunk.js"
   ]
 }
