@@ -1,6 +1,6 @@
 @import "styles/scss-vars.scss";
 
-.container {
+.alphabet {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,12 +27,12 @@
   font-size: 48px;
   padding-left: 4px;
   padding-right: 4px;
-  color: $color-black;
+  color: $color-white;
   text-decoration: none;
 
   &:hover,
   &:active {
-    color: white;
+    color: $color-black;
     cursor: pointer;
   }
 
@@ -46,5 +46,98 @@
     font-size: 120px;
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+
+.mutations {
+  padding-left: 126px;
+  padding-right: 126px;
+
+  .title {
+    margin-top: 75px;
+    margin-bottom: 0;
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 107px;
+    text-align: center;
+    color: $color-yellow;
+  }
+
+  .subtitle {
+    margin-top: 17px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: $color-yellow;
+  }
+
+  .mutation {
+    display: flex;
+    width: 1136px;
+    margin-top: 140px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:first-of-type) {
+      margin-top: 180px;
+    }
+
+    &--right {
+      .mutation-title {
+        flex: 0 0 397px;
+        width: 397px;
+      }
+
+      .mutation-description {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .mutation-info {
+    flex: 1;
+  }
+
+  .mutation-header {
+    display: flex;
+  }
+
+  .mutation-title {
+    flex: 0 0 347px;
+    width: 347px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-yellow;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .mutation-line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-white;
+    margin-top: 13px;
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+
+  .mutation-description {
+    width: 397px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: justify;
+    color: $color-white;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .image {
+    flex: 0 0 397px;
+    font-size: 64px;
+    text-align: center;
+    background-color: $color-black;
+    color: $color-white;
   }
 }
