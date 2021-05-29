@@ -105,7 +105,7 @@ const Alphabet: React.FC = () => {
           <div className={styles.image}>*Bus ikona*</div>
           <div className={styles["mutation-info"]}>
             <div className={styles["mutation-header"]}>
-              <div className={styles["mutation-line"]} />
+              <div className={classNames(styles["mutation-line"], styles["mutation-line--right"])} />
               <h3 className={classNames(styles["mutation-title"], styles["mutation-title--right"])}>
                 Aplinkos mutagenai, dar kitaip vadinami daugiaveiksmės-kompleksinės ligos
               </h3>

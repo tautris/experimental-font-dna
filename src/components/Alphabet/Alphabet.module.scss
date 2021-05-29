@@ -1,5 +1,11 @@
 @import "styles/scss-vars.scss";
 
+$mutation-info-width: 397px;
+$mutation-title-reduced-width: 347px;
+$image-width: 340px;
+$line-padding-left: 23px;
+$line-padding-right: 23px;
+
 .alphabet {
   display: flex;
   flex-wrap: wrap;
@@ -52,24 +58,26 @@
 .mutations {
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 200px;
 
   .title {
     margin-top: 75px;
     margin-bottom: 0;
-    font-size: 90px;
+    font-size: 72px;
     font-weight: bold;
-    line-height: 107px;
+    line-height: 86px;
     text-align: center;
-    color: $color-yellow;
+    color: $color-black;
   }
 
   .subtitle {
     margin-top: 17px;
     margin-bottom: 0;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 17px;
     text-align: center;
-    color: $color-yellow;
+    color: $color-black;
   }
 
   .mutation {
@@ -104,17 +112,17 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
-    color: $color-yellow;
+    color: $color-black;
     margin-top: 0;
     margin-bottom: 0;
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      flex: 0 0 347px;
-      width: 347px;
+      flex: 0 0 $mutation-title-reduced-width;
+      width: $mutation-title-reduced-width;
 
       &--right {
-        flex: 0 0 397px;
-        width: 397px;
+        flex: 0 0 $mutation-info-width;
+        width: $mutation-info-width;
       }
     }
   }
@@ -125,8 +133,13 @@
     height: 1px;
     background-color: $color-white;
     margin-top: 13px;
-    margin-left: 23px;
-    margin-right: 23px;
+    margin-left: $line-padding-left;
+    margin-right: $mutation-info-width - $image-width + $line-padding-right;
+
+    &--right {
+      margin-left: $mutation-title-reduced-width - $image-width + $line-padding-left;
+      margin-right: $line-padding-right;
+    }
 
     @media only screen and (min-width: $breakpoint-desktop) {
       display: block;
@@ -142,7 +155,7 @@
     margin-bottom: 0;
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      width: 397px;
+      width: $mutation-info-width;
 
       &--right {
         margin-left: auto;
@@ -152,8 +165,8 @@
 
   .image {
     display: none;
-    flex: 0 0 397px;
-    font-size: 64px;
+    flex: 0 0 $image-width;
+    font-size: 48px;
     text-align: center;
     background-color: $color-black;
     color: $color-white;
