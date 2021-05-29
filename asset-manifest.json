@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/experimental-font-dna/static/css/main.e819fa0d.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.6a721cf2.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.6a721cf2.chunk.js.map",
+    "main.css": "/experimental-font-dna/static/css/main.9181572c.chunk.css",
+    "main.js": "/experimental-font-dna/static/js/main.eaa88e64.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.eaa88e64.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.6d2b1934.js",
     "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.6d2b1934.js.map",
-    "static/js/2.a96d2049.chunk.js": "/experimental-font-dna/static/js/2.a96d2049.chunk.js",
-    "static/js/2.a96d2049.chunk.js.map": "/experimental-font-dna/static/js/2.a96d2049.chunk.js.map",
+    "static/js/2.e521812d.chunk.js": "/experimental-font-dna/static/js/2.e521812d.chunk.js",
+    "static/js/2.e521812d.chunk.js.map": "/experimental-font-dna/static/js/2.e521812d.chunk.js.map",
     "static/js/3.66f86367.chunk.js": "/experimental-font-dna/static/js/3.66f86367.chunk.js",
     "static/js/3.66f86367.chunk.js.map": "/experimental-font-dna/static/js/3.66f86367.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
-    "static/css/main.e819fa0d.chunk.css.map": "/experimental-font-dna/static/css/main.e819fa0d.chunk.css.map",
-    "static/js/2.a96d2049.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.a96d2049.chunk.js.LICENSE.txt",
+    "static/css/main.9181572c.chunk.css.map": "/experimental-font-dna/static/css/main.9181572c.chunk.css.map",
+    "static/js/2.e521812d.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.e521812d.chunk.js.LICENSE.txt",
     "static/media/genetic_processes.81f809c0.mp4": "/experimental-font-dna/static/media/genetic_processes.81f809c0.mp4",
     "static/media/genetic_processes.fa9adaed.ogg": "/experimental-font-dna/static/media/genetic_processes.fa9adaed.ogg"
   },
   "entrypoints": [
     "static/js/runtime-main.6d2b1934.js",
-    "static/js/2.a96d2049.chunk.js",
-    "static/css/main.e819fa0d.chunk.css",
-    "static/js/main.6a721cf2.chunk.js"
+    "static/js/2.e521812d.chunk.js",
+    "static/css/main.9181572c.chunk.css",
+    "static/js/main.eaa88e64.chunk.js"
   ]
 }
