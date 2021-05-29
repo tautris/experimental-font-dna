@@ -67,6 +67,14 @@ const Alphabet: React.FC = () => {
           </animated.div>
         ))}
       </div>
+      {/* Reserving required space for alphabet above */}
+      <div className={styles['alphabet-placeholder']}>
+        {SVG_LETTERS.map(({ letter }) => (
+          <div key={letter} className={styles.letter}>
+            {letter.toUpperCase()}
+          </div>
+        ))}
+      </div>
       <div className={styles.mutations}>
         <h2 className={styles.title}>Mutacijos</h2>
         <p className={styles.subtitle}>Norėdami pamatyti mutaciją,pasirinkite raidę</p>

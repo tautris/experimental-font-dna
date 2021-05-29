@@ -7,6 +7,7 @@ $line-padding-left: 23px;
 $line-padding-right: 23px;
 
 .alphabet {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,6 +28,12 @@ $line-padding-right: 23px;
     padding-left: 120px;
     padding-right: 120px;
   }
+}
+
+.alphabet-placeholder {
+  @extend .alphabet;
+  position: static;
+  visibility: hidden;
 }
 
 .letter {
