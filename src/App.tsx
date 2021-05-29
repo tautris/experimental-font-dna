@@ -9,6 +9,7 @@ import { PageTransition } from "components/PageTransition/PageTransition";
 import { About } from "components/About/About";
 import { Alphabet } from "components/Alphabet/Alphabet";
 import { LetterExposition } from "components/LetterExposition/LetterExposition";
+import { GenomeFont } from "components/GenomeFont/GenomeFont";
 
 import { PATH } from "constants/paths";
 
@@ -35,7 +36,7 @@ const App: React.FC = () => {
               <Alphabet />
             </Route>
             <Route path={PATH.GENOME_FONT}>
-              <div>Genomo šriftas page</div>
+              <GenomeFont />
             </Route>
             <Route path={PATH.ABOUT}>
               <About />
