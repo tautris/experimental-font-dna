@@ -3,46 +3,9 @@ import { generatePath, Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 
 import { PATH } from "constants/paths";
+import { SVG_LETTERS } from 'constants/letters';
 
 import styles from "./Alphabet.module.scss";
-
-const ALPHABET_LETTERS = [
-  "a",
-  "ą",
-  "b",
-  "c",
-  "č",
-  "d",
-  "e",
-  "ę",
-  "ė",
-  "f",
-  "g",
-  "h",
-  "i",
-  "į",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "š",
-  "t",
-  "u",
-  "ų",
-  "ū",
-  "v",
-  "x",
-  "y",
-  "z",
-  "ž",
-  "w",
-];
 
 const DURATION_MS = 200;
 const LETTER_INTERVAL_MS = 40;
@@ -61,11 +24,11 @@ const Alphabet: React.FC = () => {
   });
 
   const renderRemainingLetters = (index = 0) => {
-    if (index >= ALPHABET_LETTERS.length) {
+    if (index >= SVG_LETTERS.length) {
       return;
     }
 
-    setLetters((currentLetters) => [...currentLetters, ALPHABET_LETTERS[index]]);
+    setLetters((currentLetters) => [...currentLetters, SVG_LETTERS[index].letter]);
 
     timeoutRef.current = setTimeout(() => {
       renderRemainingLetters(index + 1);
