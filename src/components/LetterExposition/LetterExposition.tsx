@@ -52,14 +52,14 @@ const LetterExposition: React.FC = () => {
     return null;
   }
 
-  const { viewBox, path } = letterConfig;
+  const { viewBox, paths } = letterConfig;
 
   return (
     <div className={styles.container}>
       <div className={styles.letter}>
-        <svg width="400" height="400" viewBox={viewBox}>
+        <svg width="200" height="450" viewBox={viewBox} preserveAspectRatio="xMidYMid meet">
           <animated.g fill="transparent" stroke="#fff" strokeWidth={0.25}>
-            <animated.path fill={fill} ref={pathRef} strokeDasharray={offset} strokeDashoffset={dash} d={path} />
+            <animated.path fill={fill} ref={pathRef} strokeDasharray={offset} strokeDashoffset={dash} d={paths[0]} />
           </animated.g>
         </svg>
       </div>
