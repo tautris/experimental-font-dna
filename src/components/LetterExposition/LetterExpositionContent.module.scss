@@ -1,0 +1,10 @@
+@import "styles/scss-vars.scss";
+
+.container {
+  display: flex;
+  margin-top: 60px;
+
+  .letter {
+    margin: auto;
+  }
+}
