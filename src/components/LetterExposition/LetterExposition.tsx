@@ -10,7 +10,7 @@ interface UrlParams {
   letter: string;
 }
 
-const blackColor = "17, 17, 17";
+const whiteColor = "255,255,255";
 
 const LetterExposition: React.FC = () => {
   const { params } = useRouteMatch<UrlParams>();
@@ -37,8 +37,8 @@ const LetterExposition: React.FC = () => {
   const { fill } = useSpring({
     reset: true,
     reverse: true,
-    from: { fill: `rgba(${blackColor}, 1)` },
-    to: { fill: `rgba(${blackColor}, 0)` },
+    from: { fill: `rgba(${whiteColor}, 1)` },
+    to: { fill: `rgba(${whiteColor}, 0)` },
     config: { duration: 2000 },
     ref: fillValuesRef,
   });
@@ -58,15 +58,8 @@ const LetterExposition: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.letter}>
         <svg width="400" height="400" viewBox={viewBox}>
-          <animated.g fill="transparent" stroke="#111" strokeWidth={0.25}>
-            <animated.path
-              fill={fill}
-              stroke="#111"
-              ref={pathRef}
-              strokeDasharray={offset}
-              strokeDashoffset={dash}
-              d={path}
-            />
+          <animated.g fill="transparent" stroke="#fff" strokeWidth={0.25}>
+            <animated.path fill={fill} ref={pathRef} strokeDasharray={offset} strokeDashoffset={dash} d={path} />
           </animated.g>
         </svg>
       </div>
