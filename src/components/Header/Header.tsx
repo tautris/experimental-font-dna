@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Link, useLocation } from "react-router-dom";
+import { Link, matchPath, useLocation } from "react-router-dom";
 
 import { PATH } from "constants/paths";
 
@@ -19,6 +19,7 @@ const Header: React.FC<Props> = ({ isHomePage }) => {
     {
       path: PATH.HOME,
       text: "Pagrindinis",
+      isExact: true,
     },
     {
       path: PATH.ALPHABET,
@@ -36,8 +37,8 @@ const Header: React.FC<Props> = ({ isHomePage }) => {
 
   return (
     <nav className={classNames(isHomePage ? styles.header : styles.header)}>
-      {HEADER_ITEMS.map(({ path, text }) => {
-        const isActive = path === pathname;
+      {HEADER_ITEMS.map(({ path, text, isExact }) => {
+        const isActive = matchPath(pathname, { path, exact: isExact });
 
         return (
           <Link key={path} to={path} className={classNames(styles.item, isActive && styles.active)}>
