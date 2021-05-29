@@ -4,26 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 
 import { PATH } from "constants/paths";
 
-import styles from "./Header.module.scss";
+import { isMobile } from "helpers/responsive";
 
-const HEADER_ITEMS = [
-  {
-    path: PATH.HOME,
-    text: "Pagrindinis",
-  },
-  {
-    path: PATH.ALPHABET,
-    text: "Abėcelė",
-  },
-  {
-    path: PATH.GENOME_FONT,
-    text: "Genomo šriftas",
-  },
-  {
-    path: PATH.ABOUT,
-    text: "Apie",
-  },
-];
+import styles from "./Header.module.scss";
 
 interface Props {
   isHomePage: boolean;
@@ -31,6 +14,25 @@ interface Props {
 
 const Header: React.FC<Props> = ({ isHomePage }) => {
   const { pathname } = useLocation();
+
+  const HEADER_ITEMS = [
+    {
+      path: PATH.HOME,
+      text: "Pagrindinis",
+    },
+    {
+      path: PATH.ALPHABET,
+      text: "Abėcelė",
+    },
+    {
+      path: PATH.GENOME_FONT,
+      text: isMobile() ? "Šriftas" : "Genomo šriftas",
+    },
+    {
+      path: PATH.ABOUT,
+      text: "Apie",
+    },
+  ];
 
   return (
     <nav className={classNames(isHomePage ? styles.header : styles.header)}>
