@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/experimental-font-dna/static/css/main.572aff47.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.e40d3465.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.e40d3465.chunk.js.map",
+    "main.css": "/experimental-font-dna/static/css/main.b723d12b.chunk.css",
+    "main.js": "/experimental-font-dna/static/js/main.81d70e14.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.81d70e14.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.fca5599f.js",
     "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.fca5599f.js.map",
-    "static/js/2.9d53f264.chunk.js": "/experimental-font-dna/static/js/2.9d53f264.chunk.js",
-    "static/js/2.9d53f264.chunk.js.map": "/experimental-font-dna/static/js/2.9d53f264.chunk.js.map",
+    "static/js/2.b3114809.chunk.js": "/experimental-font-dna/static/js/2.b3114809.chunk.js",
+    "static/js/2.b3114809.chunk.js.map": "/experimental-font-dna/static/js/2.b3114809.chunk.js.map",
     "static/js/3.ecf4eab4.chunk.js": "/experimental-font-dna/static/js/3.ecf4eab4.chunk.js",
     "static/js/3.ecf4eab4.chunk.js.map": "/experimental-font-dna/static/js/3.ecf4eab4.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
-    "static/css/main.572aff47.chunk.css.map": "/experimental-font-dna/static/css/main.572aff47.chunk.css.map",
-    "static/js/2.9d53f264.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.9d53f264.chunk.js.LICENSE.txt",
+    "static/css/main.b723d12b.chunk.css.map": "/experimental-font-dna/static/css/main.b723d12b.chunk.css.map",
+    "static/js/2.b3114809.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.b3114809.chunk.js.LICENSE.txt",
     "static/media/genetic_processes.94169265.mp4": "/experimental-font-dna/static/media/genetic_processes.94169265.mp4",
     "static/media/genetic_processes.fe469ea7.ogg": "/experimental-font-dna/static/media/genetic_processes.fe469ea7.ogg",
     "static/media/genetic_processes_poster.2cb8d51a.jpeg": "/experimental-font-dna/static/media/genetic_processes_poster.2cb8d51a.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.fca5599f.js",
-    "static/js/2.9d53f264.chunk.js",
-    "static/css/main.572aff47.chunk.css",
-    "static/js/main.e40d3465.chunk.js"
+    "static/js/2.b3114809.chunk.js",
+    "static/css/main.b723d12b.chunk.css",
+    "static/js/main.81d70e14.chunk.js"
   ]
 }
