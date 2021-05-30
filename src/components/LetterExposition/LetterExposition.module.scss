@@ -1,4 +1,36 @@
+@import "styles/scss-vars.scss";
+
 .navigation {
-  position: absolute;
-  right: 50px;
+  text-align: center;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    position: absolute;
+    right: 50px;
+  }
+}
+
+.alphabet-navigation {
+  display: none;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.alphabet-link {
+  display: block;
+  margin-top: 24px;
+  font-size: 24px;
+  text-decoration: none;
+  color: $color-white;
+
+  &:hover,
+  &:active,
+  &--highlighted {
+    color: $color-black;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    display: none;
+  }
 }

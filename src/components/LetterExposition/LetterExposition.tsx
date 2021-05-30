@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouteMatch } from "react-router";
+import { generatePath, Link } from "react-router-dom";
 
 import { AlphabetNavigation } from "components/AlphabetNavigation/AlphabetNavigation";
 import { SVG_LETTERS } from "constants/letters";
+import { PATH } from "constants/paths";
 
 import { LetterExpositionContent } from "./LetterExpositionContent";
 
@@ -26,7 +28,12 @@ const LetterExposition: React.FC = () => {
     <div>
       <LetterExpositionContent letterConfig={letterConfig} />
       <div className={styles.navigation}>
-        <AlphabetNavigation selectedLetter={letterConfig.letter} />
+        <div className={styles["alphabet-navigation"]}>
+          <AlphabetNavigation selectedLetter={letterConfig.letter} />
+        </div>
+        <Link to={generatePath(PATH.ALPHABET)} className={styles["alphabet-link"]}>
+          &#8249; Į Abėcėlę
+        </Link>
       </div>
     </div>
   );
