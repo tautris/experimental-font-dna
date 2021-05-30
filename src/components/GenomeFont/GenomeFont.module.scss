@@ -63,4 +63,31 @@
       opacity: 0.3;
     }
   }
+
+  .anatomy-title {
+    margin-top: 72px;
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 56px;
+      line-height: 70px;
+    }
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      font-size: 90px;
+      line-height: 107px;
+    }
+  }
+
+  .anatomy-image {
+    width: 100%;
+    content-visibility: auto;
+
+    &:not(:first-of-type) {
+      margin-top: $spacer-l;
+    }
+  }
 }
