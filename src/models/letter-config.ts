@@ -3,5 +3,8 @@ export interface SvgLetterConfig {
   viewBox: string;
   paths: string[];
   mutationType: "mutagen" | "trisomy" | "monosomy" | "point";
-  mutationPaths: string[];
+  mutationPaths: {
+    path: string;
+    isStroke: boolean;
+  }[];
 }

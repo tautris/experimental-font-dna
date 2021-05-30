@@ -59,8 +59,8 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
                 d={path}
               />
             ))}
-            {mutationPaths.map((path, index) => (
-              <path key={index} fill="rgba(255, 0, 0, 0.5)" d={path} />
+            {mutationPaths.map((mutationPath, index) => (
+              <path key={index} fill="rgba(255, 0, 0, 0.5)" d={mutationPath.path} />
             ))}
           </g>
         </svg>
