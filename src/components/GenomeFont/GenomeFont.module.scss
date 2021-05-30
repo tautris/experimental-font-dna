@@ -14,36 +14,33 @@
 }
 
 .container {
-  padding-bottom: 200px;
+  margin-top: 80px;
+  padding-bottom: 60px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 
-  .change-font-size {
-    margin-top: $spacer-xxl;
+  .input-wrapper {
+    display: inline-block;
+    margin-right: $spacer-xl;
 
-    .input-wrapper {
-      display: inline-block;
-      margin-right: $spacer-xl;
+    .input {
+      padding: $spacer-s $spacer-m;
 
-      .input {
-        padding: $spacer-s $spacer-m;
-
-        &:after {
-          @include radio-checkbox-after;
-          background-color: $color-white;
-        }
-
-        &:checked:after {
-          @include radio-checkbox-after;
-          background-color: $color-yellow;
-        }
+      &:after {
+        @include radio-checkbox-after;
+        background-color: $color-white;
       }
 
-      .label {
-        margin-left: $spacer-s;
-        color: $color-white;
+      &:checked:after {
+        @include radio-checkbox-after;
+        background-color: $color-yellow;
       }
+    }
+
+    .label {
+      margin-left: $spacer-s;
+      color: $color-white;
     }
   }
 
@@ -61,6 +58,7 @@
     &::placeholder {
       color: $color-white;
       opacity: 0.3;
+      font-style: italic;
     }
   }
 
@@ -84,7 +82,7 @@
 
   .anatomy-image {
     width: 100%;
-    content-visibility: auto;
+    margin-left: -50px;
 
     &:not(:first-of-type) {
       margin-top: $spacer-l;

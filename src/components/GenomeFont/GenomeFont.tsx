@@ -53,30 +53,29 @@ const GenomeFont: React.FC = () => {
 
   const anatomyImageProps: Partial<React.ImgHTMLAttributes<HTMLImageElement>> = {
     className: styles["anatomy-image"],
-    loading: "lazy",
-    decoding: "async",
+    // TODO: might want to add after testing out
+    // loading: "lazy",
+    // decoding: "async",
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles["change-font-size"]}>
-        {FONT_SIZE_OPTIONS.map((option) => (
-          <div key={option} className={styles["input-wrapper"]}>
-            <input
-              type="radio"
-              id={option}
-              name={option}
-              value={option}
-              checked={fontSize === option}
-              className={styles.input}
-              onChange={handleFontSizeChange}
-            />
-            <label htmlFor={option} className={styles.label}>
-              {option}
-            </label>
-          </div>
-        ))}
-      </div>
+      {FONT_SIZE_OPTIONS.map((option) => (
+        <div key={option} className={styles["input-wrapper"]}>
+          <input
+            type="radio"
+            id={option}
+            name={option}
+            value={option}
+            checked={fontSize === option}
+            className={styles.input}
+            onChange={handleFontSizeChange}
+          />
+          <label htmlFor={option} className={styles.label}>
+            {option}
+          </label>
+        </div>
+      ))}
 
       <textarea
         className={styles.textarea}
