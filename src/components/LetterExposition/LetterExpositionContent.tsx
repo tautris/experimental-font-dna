@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSprings, animated } from "react-spring/web";
 
-import { SVG_LETTERS } from "constants/letters";
+import { SvgLetterConfig } from "models/letter-config";
 
 import styles from "./LetterExpositionContent.module.scss";
 
 interface Props {
-  letterConfig: typeof SVG_LETTERS[number];
+  letterConfig: SvgLetterConfig;
 }
 
 const whiteColor = "255,255,255";

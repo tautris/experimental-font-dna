@@ -1,4 +1,6 @@
-export const SVG_LETTERS = [
+import { SvgLetterConfig } from "models/letter-config";
+
+export const SVG_LETTERS: SvgLetterConfig[] = [
     {
         letter: 'a',
         viewBox: '0 -47 60 210',

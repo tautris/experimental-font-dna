@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import { PATH } from "constants/paths";
 import { SVG_LETTERS } from "constants/letters";
+import { SvgLetterConfig } from "models/letter-config";
 
 import styles from "./Alphabet.module.scss";
 
@@ -12,7 +13,7 @@ const DURATION_MS = 200;
 const LETTER_INTERVAL_MS = 150;
 
 const Alphabet: React.FC = () => {
-  const [letters, setLetters] = React.useState<string[]>([]);
+  const [letters, setLetters] = React.useState<SvgLetterConfig[]>([]);
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 
   const transitions = useTransition(letters, {
@@ -29,7 +30,7 @@ const Alphabet: React.FC = () => {
       return;
     }
 
-    setLetters((currentLetters) => [...currentLetters, SVG_LETTERS[index].letter]);
+    setLetters((currentLetters) => [...currentLetters, SVG_LETTERS[index]]);
 
     timeoutRef.current = setTimeout(() => {
       renderRemainingLetters(index + 1);
@@ -46,10 +47,24 @@ const Alphabet: React.FC = () => {
     };
   }, []);
 
+  const renderLetter = (letterConfig: SvgLetterConfig) => {
+    const { viewBox, paths } = letterConfig;
+
+    return (
+      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" className={styles.gplyph}>
+        <g fill="transparent" stroke="currentColor" strokeWidth={0.25}>
+          {paths.map((path, index) => (
+            <path key={index} fill="currentColor" d={path} />
+          ))}
+        </g>
+      </svg>
+    );
+  };
+
   return (
     <div>
       <div className={styles.alphabet}>
-        {transitions(({ positionY, opacity }, letter) => (
+        {transitions(({ positionY, opacity }, letterConfig) => (
           <animated.div
             style={{
               opacity,
@@ -58,20 +73,20 @@ const Alphabet: React.FC = () => {
           >
             <Link
               to={generatePath(PATH.LETTER, {
-                letter,
+                letter: letterConfig.letter,
               })}
               className={styles.letter}
             >
-              {letter.toUpperCase()}
+              {renderLetter(letterConfig)}
             </Link>
           </animated.div>
         ))}
       </div>
       {/* Reserving required space for alphabet above */}
-      <div className={styles['alphabet-placeholder']}>
-        {SVG_LETTERS.map(({ letter }) => (
-          <div key={letter} className={styles.letter}>
-            {letter.toUpperCase()}
+      <div className={styles["alphabet-placeholder"]}>
+        {SVG_LETTERS.map((letterConfig) => (
+          <div key={letterConfig.letter} className={styles.letter}>
+            {renderLetter(letterConfig)}
           </div>
         ))}
       </div>

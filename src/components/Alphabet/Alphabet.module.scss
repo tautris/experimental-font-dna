@@ -39,9 +39,9 @@ $line-padding-right: 23px;
 }
 
 .letter {
-  font-size: 48px;
-  padding-left: 4px;
-  padding-right: 4px;
+  font-size: 76px;
+  margin-left: 4px;
+  margin-right: 4px;
   color: $color-white;
   text-decoration: none;
 
@@ -52,16 +52,17 @@ $line-padding-right: 23px;
   }
 
   @media only screen and (min-width: $breakpoint-mobile) {
-    font-size: 80px;
-    padding-left: 6px;
-    padding-right: 6px;
+    font-size: 126px;
   }
 
   @media only screen and (min-width: $breakpoint-desktop) {
-    font-size: 120px;
-    padding-left: 8px;
-    padding-right: 8px;
+    font-size: 189px;
   }
+}
+
+.gplyph {
+  width: 0.444em;
+  height: 1em;
 }
 
 .mutations {
@@ -70,23 +71,45 @@ $line-padding-right: 23px;
   padding-bottom: 200px;
 
   .title {
-    margin-top: 75px;
+    margin-top: 10px;
     margin-bottom: 0;
-    font-size: 72px;
+    font-size: 36px;
     font-weight: bold;
-    line-height: 86px;
+    line-height: 50px;
     text-align: center;
     color: $color-black;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 56px;
+      line-height: 70px;
+    }
+  
+    @media only screen and (min-width: $breakpoint-desktop) {
+      font-size: 72px;
+      line-height: 86px;
+    }
   }
 
   .subtitle {
-    margin-top: 17px;
+    margin-top: 10px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
-    line-height: 17px;
+    line-height: 15px;
     text-align: center;
     color: $color-black;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      margin-top: 14px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  
+    @media only screen and (min-width: $breakpoint-desktop) {
+      margin-top: 17px;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .mutation {
@@ -119,15 +142,22 @@ $line-padding-right: 23px;
 
   .mutation-title {
     font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 17px;
     color: $color-black;
     margin-top: 0;
     margin-bottom: 0;
 
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
     @media only screen and (min-width: $breakpoint-desktop) {
       flex: 0 0 $mutation-title-reduced-width;
       width: $mutation-title-reduced-width;
+      font-size: 18px;
+      line-height: 21px;
 
       &--right {
         flex: 0 0 $mutation-info-width;
@@ -156,15 +186,22 @@ $line-padding-right: 23px;
   }
 
   .mutation-description {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: justify;
     color: $color-white;
     margin-top: 15px;
     margin-bottom: 0;
 
+    @media only screen and (min-width: $breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
     @media only screen and (min-width: $breakpoint-desktop) {
       width: $mutation-info-width;
+      font-size: 18px;
+      line-height: 21px;
 
       &--right {
         margin-left: auto;
