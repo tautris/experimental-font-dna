@@ -22,27 +22,28 @@
   .change-font-size {
     margin-top: $spacer-xxl;
 
-    .input {
-      padding: $spacer-s $spacer-m;
+    .input-wrapper {
+      display: inline-block;
+      margin-right: $spacer-xl;
 
-      &:not(:first-of-type) {
-        margin-left: $spacer-xl;
+      .input {
+        padding: $spacer-s $spacer-m;
+
+        &:after {
+          @include radio-checkbox-after;
+          background-color: $color-white;
+        }
+
+        &:checked:after {
+          @include radio-checkbox-after;
+          background-color: $color-yellow;
+        }
       }
 
-      &:after {
-        @include radio-checkbox-after;
-        background-color: $color-white;
+      .label {
+        margin-left: $spacer-s;
+        color: $color-white;
       }
-
-      &:checked:after {
-        @include radio-checkbox-after;
-        background-color: $color-yellow;
-      }
-    }
-
-    .label {
-      margin-left: $spacer-s;
-      color: $color-white;
     }
   }
 

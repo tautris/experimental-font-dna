@@ -8,8 +8,6 @@ const GenomeFont: React.FC = () => {
   const [fontSize, setFontSize] = React.useState<string>("48 px");
 
   const handleFontSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("event.target.value", event.target.value);
-
     setFontSize(event.target.value);
   };
 
@@ -21,7 +19,7 @@ const GenomeFont: React.FC = () => {
     <div className={styles.container}>
       <div className={styles["change-font-size"]}>
         {FONT_SIZE_OPTIONS.map((option) => (
-          <React.Fragment key={option}>
+          <div key={option} className={styles["input-wrapper"]}>
             <input
               type="radio"
               id={option}
@@ -34,14 +32,14 @@ const GenomeFont: React.FC = () => {
             <label htmlFor={option} className={styles.label}>
               {option}
             </label>
-          </React.Fragment>
+          </div>
         ))}
       </div>
 
       <textarea
         className={styles.textarea}
         style={textAreaStyle}
-        placeholder="Čia galima vesti tekstą"
+        placeholder="Paeksperimentuok"
         spellCheck={false}
         autoCapitalize="off"
         autoCorrect="off"

@@ -2,6 +2,7 @@ import React from "react";
 
 import geneticProcessesMP4 from "assets/videos/genetic_processes.mp4";
 import geneticProcessesOGG from "assets/videos/genetic_processes.ogg";
+import geneticProcessesPoster from "assets/images/genetic_processes_poster.jpeg";
 
 import styles from "./HomePage.module.scss";
 
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
         playsInline={true}
         disablePictureInPicture={true}
         className={styles.video}
+        poster={geneticProcessesPoster}
       >
         <source src={geneticProcessesMP4} type="video/mp4" />
         <source src={geneticProcessesOGG} type="video/ogg" />
