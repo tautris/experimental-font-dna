@@ -33,5 +33,10 @@
     background-color: transparent;
     resize: none;
     outline: none;
+
+    &::placeholder {
+      color: $color-white;
+      opacity: 0.3;
+    }
   }
 }

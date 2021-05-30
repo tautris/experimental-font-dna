@@ -37,6 +37,7 @@
   .paragraph {
     margin: 0;
     font-size: 16px;
+    color: $color-white;
 
     @media only screen and (min-width: $breakpoint-mobile) {
       font-size: 18px;
