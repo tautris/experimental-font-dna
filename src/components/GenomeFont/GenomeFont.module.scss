@@ -1,5 +1,18 @@
 @import "styles/scss-vars.scss";
 
+@mixin radio-checkbox-after {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid $color-white;
+}
+
 .container {
   padding-bottom: 200px;
   width: 80%;
@@ -13,12 +26,22 @@
       padding: $spacer-s $spacer-m;
 
       &:not(:first-of-type) {
-        margin-left: $spacer-l;
+        margin-left: $spacer-xl;
+      }
+
+      &:after {
+        @include radio-checkbox-after;
+        background-color: $color-white;
+      }
+
+      &:checked:after {
+        @include radio-checkbox-after;
+        background-color: $color-yellow;
       }
     }
 
     .label {
-      margin-left: $spacer-xs;
+      margin-left: $spacer-s;
       color: $color-white;
     }
   }
