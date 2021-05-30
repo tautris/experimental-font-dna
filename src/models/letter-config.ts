@@ -5,6 +5,6 @@ export interface SvgLetterConfig {
   mutationType: "mutagen" | "trisomy" | "monosomy" | "point";
   mutationPaths: {
     path: string;
-    isStroke: boolean;
+    isStroke?: boolean;
   }[];
 }
