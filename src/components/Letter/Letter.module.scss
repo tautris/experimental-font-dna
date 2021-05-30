@@ -1,0 +1,19 @@
+@import "styles/scss-vars.scss";
+
+.letter {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: $color-white;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &--highlighted {
+    color: $color-black;
+  }
+}
+
+.glyph {
+  width: 0.444em;
+  height: 1em;
+}

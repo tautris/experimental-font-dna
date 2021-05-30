@@ -3,6 +3,7 @@ import { generatePath, Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import classNames from "classnames";
 
+import { Letter } from "components/Letter/Letter";
 import { PATH } from "constants/paths";
 import { SVG_LETTERS } from "constants/letters";
 import { SvgLetterConfig } from "models/letter-config";
@@ -47,20 +48,6 @@ const Alphabet: React.FC = () => {
     };
   }, []);
 
-  const renderLetter = (letterConfig: SvgLetterConfig) => {
-    const { viewBox, paths } = letterConfig;
-
-    return (
-      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" className={styles.gplyph}>
-        <g fill="transparent" stroke="currentColor" strokeWidth={0.25}>
-          {paths.map((path, index) => (
-            <path key={index} fill="currentColor" d={path} />
-          ))}
-        </g>
-      </svg>
-    );
-  };
-
   return (
     <div>
       <div className={styles.alphabet}>
@@ -75,9 +62,8 @@ const Alphabet: React.FC = () => {
               to={generatePath(PATH.LETTER, {
                 letter: letterConfig.letter,
               })}
-              className={styles.letter}
             >
-              {renderLetter(letterConfig)}
+              <Letter letterConfig={letterConfig} />
             </Link>
           </animated.div>
         ))}
@@ -85,9 +71,7 @@ const Alphabet: React.FC = () => {
       {/* Reserving required space for alphabet above */}
       <div className={styles["alphabet-placeholder"]}>
         {SVG_LETTERS.map((letterConfig) => (
-          <div key={letterConfig.letter} className={styles.letter}>
-            {renderLetter(letterConfig)}
-          </div>
+          <Letter key={letterConfig.letter} letterConfig={letterConfig} />
         ))}
       </div>
       <div className={styles.mutations}>
