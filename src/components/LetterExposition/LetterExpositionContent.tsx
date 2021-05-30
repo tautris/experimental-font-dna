@@ -12,7 +12,7 @@ interface Props {
 const whiteColor = "255,255,255";
 
 const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
-  const { viewBox, paths } = letterConfig;
+  const { viewBox, paths, mutationPaths } = letterConfig;
 
   const pathRefs = useRef<(SVGPathElement | null)[]>(new Array(paths.length));
   const [offsets, setOffsets] = useState<number[]>(new Array(paths.length));
@@ -48,7 +48,7 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
     <div className={styles.container}>
       <div className={styles.letter}>
         <svg width="200" height="450" viewBox={viewBox} preserveAspectRatio="xMidYMid meet">
-          <animated.g fill="transparent" stroke="#fff" strokeWidth={0.25}>
+          <g fill="transparent" stroke="#fff" strokeWidth={0.25}>
             {paths.map((path, index) => (
               <animated.path
                 key={index}
@@ -59,7 +59,10 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
                 d={path}
               />
             ))}
-          </animated.g>
+            {mutationPaths.map((path, index) => (
+              <path key={index} fill="rgba(255, 0, 0, 0.5)" d={path} />
+            ))}
+          </g>
         </svg>
       </div>
     </div>
