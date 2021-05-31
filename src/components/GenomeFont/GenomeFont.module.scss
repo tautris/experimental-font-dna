@@ -115,10 +115,13 @@
 
   .anatomy-image {
     width: 100%;
-    margin-left: -50px;
 
     &:not(:first-of-type) {
       margin-top: $spacer-l;
+    }
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      margin-left: -50px;
     }
   }
 }
