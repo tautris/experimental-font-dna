@@ -54,9 +54,10 @@
     background-color: transparent;
     resize: none;
     outline: none;
-    font-family: "Genomas";
+    font-family: $font-family-secondary;
 
     &::placeholder {
+      font-family: $font-family-primary;
       color: $color-white;
       opacity: 0.3;
       font-style: italic;
