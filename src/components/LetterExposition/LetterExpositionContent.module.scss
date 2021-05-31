@@ -6,5 +6,12 @@
 
   .letter {
     margin: auto;
+
+    .mutation-type {
+      margin-top: $spacer-xxl;
+      text-align: center;
+      font-size: 24px;
+      color: $color-white;
+    }
   }
 }

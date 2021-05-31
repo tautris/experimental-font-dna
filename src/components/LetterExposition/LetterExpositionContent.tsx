@@ -9,10 +9,17 @@ interface Props {
   letterConfig: SvgLetterConfig;
 }
 
-const whiteColor = "255,255,255";
+const WHITE_COLOR = "255,255,255";
+
+const MUTATION_TEXT_CONFIG = {
+  mutagen: "Mutagenas",
+  trisomy: "Trisomija",
+  monosomy: "Monosomija",
+  point: "Genų taškinė mutacija",
+};
 
 const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
-  const { viewBox, paths, mutationPaths } = letterConfig;
+  const { viewBox, paths, mutationPaths, mutationType } = letterConfig;
 
   const pathRefs = useRef<(SVGPathElement | null)[]>(new Array(paths.length));
 
@@ -39,8 +46,8 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
     paths.map(() => ({
       reset: true,
       reverse: true,
-      from: { fill: `rgba(${whiteColor}, 1)` },
-      to: { fill: `rgba(${whiteColor}, 0)` },
+      from: { fill: `rgba(${WHITE_COLOR}, 1)` },
+      to: { fill: `rgba(${WHITE_COLOR}, 0)` },
       config: { duration: 2000 },
       delay: 1000,
     })),
@@ -53,6 +60,8 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
     config: { duration: 3000 },
     delay: 3000,
   });
+
+  const mutationText = MUTATION_TEXT_CONFIG[mutationType];
 
   return (
     <div className={styles.container}>
@@ -69,8 +78,8 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
               return (
                 <path
                   key={index}
-                  fill={isStroke ? "transparent" : `rgb(${whiteColor})`}
-                  stroke={isStroke ? `rgb(${whiteColor})` : undefined}
+                  fill={isStroke ? "transparent" : `rgb(${WHITE_COLOR})`}
+                  stroke={isStroke ? `rgb(${WHITE_COLOR})` : undefined}
                   strokeMiterlimit={10}
                   d={path}
                 />
@@ -83,7 +92,7 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
           height="450"
           viewBox={viewBox}
           preserveAspectRatio="xMidYMid meet"
-          style={{ opacity: mutationOpacity.to((a) => 1 - a) }}
+          style={{ opacity: mutationOpacity.to((opacity) => 1 - opacity) }}
         >
           <g fill="transparent">
             {paths.map((path, index) => (
@@ -100,6 +109,9 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
             ))}
           </g>
         </animated.svg>
+        <animated.div className={styles["mutation-type"]} style={{ opacity: mutationOpacity }}>
+          {mutationText}
+        </animated.div>
       </div>
     </div>
   );
