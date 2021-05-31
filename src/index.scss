@@ -1,5 +1,13 @@
 @import "styles/scss-vars.scss";
 
+@font-face {
+  font-family: "Genomas";
+  src: url("assets/fonts/Genomas.woff2") format("woff2"), url("assets/fonts/Genomas.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
