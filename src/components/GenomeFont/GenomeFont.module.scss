@@ -26,6 +26,7 @@
 
     .input {
       padding: $spacer-s $spacer-m;
+      -moz-appearance: initial;
 
       &:after {
         @include radio-checkbox-after;
