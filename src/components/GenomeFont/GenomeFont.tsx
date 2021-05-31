@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
 
 import styles from "./GenomeFont.module.scss";
 
@@ -37,6 +39,7 @@ import x from "assets/images/letter-anatomy/x.png";
 import y from "assets/images/letter-anatomy/y.png";
 import z from "assets/images/letter-anatomy/z.png";
 import ž from "assets/images/letter-anatomy/ž.png";
+import genomasFont from "assets/fonts/Genomas.zip";
 
 const FONT_SIZE_OPTIONS = ["24 px", "48 px", "65 px", "105 px"];
 
@@ -85,6 +88,12 @@ const GenomeFont: React.FC = () => {
         autoCapitalize="off"
         autoCorrect="off"
       />
+
+      <div className={styles.download}>
+        <a href={genomasFont} className={styles['download-link']}>
+          <FontAwesomeIcon icon={faArrowAltCircleDown} />
+        </a>
+      </div>
 
       <h1 className={styles["anatomy-title"]}>Raidžių anatomija</h1>
       <img src={a} {...anatomyImageProps} />

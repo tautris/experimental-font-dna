@@ -65,6 +65,22 @@
     }
   }
 
+  .download {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .download-link {
+    font-size: 80px;
+    color: $color-yellow;
+
+    &:hover,
+    &:active {
+      color: $color-white;
+    }
+  }
+
   .anatomy-title {
     margin-top: 72px;
     margin-bottom: 0;
