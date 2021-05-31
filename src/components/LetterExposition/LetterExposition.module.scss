@@ -4,8 +4,7 @@
   text-align: center;
 
   @media only screen and (min-width: $breakpoint-desktop) {
-    position: absolute;
-    right: 50px;
+    display: flex;
   }
 }
 
@@ -14,6 +13,8 @@
 
   @media only screen and (min-width: $breakpoint-desktop) {
     display: block;
+    margin-left: auto;
+    margin-right: 50px;
   }
 }
 
