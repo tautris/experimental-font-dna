@@ -31,8 +31,11 @@ const LetterExposition: React.FC = () => {
         <div className={styles["alphabet-navigation"]}>
           <AlphabetNavigation selectedLetter={letterConfig.letter} />
         </div>
-        <Link to={generatePath(PATH.ALPHABET)} className={styles["alphabet-link"]}>
-          &#8249; Į Abėcėlę
+        <Link
+          to={{ pathname: generatePath(PATH.ALPHABET), state: { isWithoutAnimation: true } }}
+          className={styles["alphabet-link"]}
+        >
+          &#8249; Į abėcėlę
         </Link>
       </div>
     </div>

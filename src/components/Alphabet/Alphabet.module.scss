@@ -35,6 +35,11 @@
   visibility: hidden;
 }
 
+.static-alphabet {
+  @extend .alphabet;
+  position: static;
+}
+
 .mutations {
   padding-left: 40px;
   padding-right: 40px;

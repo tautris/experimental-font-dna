@@ -1,6 +1,7 @@
 import React from "react";
-import { generatePath, Link } from "react-router-dom";
+import { generatePath, Link, useLocation } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
+import classNames from "classnames";
 
 import { Letter } from "components/Letter/Letter";
 import { PATH } from "constants/paths";
@@ -17,7 +18,13 @@ import styles from "./Alphabet.module.scss";
 const DURATION_MS = 200;
 const LETTER_INTERVAL_MS = 150;
 
+interface LocationState {
+  isWithoutAnimation: boolean;
+}
+
 const Alphabet: React.FC = () => {
+  const { state } = useLocation<LocationState>();
+
   const [letters, setLetters] = React.useState<SvgLetterConfig[]>([]);
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 
@@ -52,32 +59,44 @@ const Alphabet: React.FC = () => {
     };
   }, []);
 
+  const isWithoutAnimation = state?.isWithoutAnimation;
+
   return (
     <div>
-      <div className={styles.alphabet}>
-        {transitions(({ positionY, opacity }, letterConfig) => (
-          <animated.div
-            style={{
-              opacity,
-              transform: positionY.to((y) => `translate(0, ${y}px)`),
-            }}
-          >
-            <Link
-              to={generatePath(PATH.LETTER, {
-                letter: letterConfig.letter,
-              })}
+      {!isWithoutAnimation && (
+        <div className={styles.alphabet}>
+          {transitions(({ positionY, opacity }, letterConfig) => (
+            <animated.div
+              style={{
+                opacity,
+                transform: positionY.to((y) => `translate(0, ${y}px)`),
+              }}
             >
-              <Letter letterConfig={letterConfig} />
-            </Link>
-          </animated.div>
-        ))}
-      </div>
-      {/* Reserving required space for alphabet above */}
-      <div className={styles["alphabet-placeholder"]}>
+              <Link
+                to={generatePath(PATH.LETTER, {
+                  letter: letterConfig.letter,
+                })}
+              >
+                <Letter letterConfig={letterConfig} />
+              </Link>
+            </animated.div>
+          ))}
+        </div>
+      )}
+
+      <div className={classNames(isWithoutAnimation ? styles["static-alphabet"] : styles["alphabet-placeholder"])}>
         {SVG_LETTERS.map((letterConfig) => (
-          <Letter key={letterConfig.letter} letterConfig={letterConfig} />
+          <Link
+            key={letterConfig.letter}
+            to={generatePath(PATH.LETTER, {
+              letter: letterConfig.letter,
+            })}
+          >
+            <Letter letterConfig={letterConfig} />
+          </Link>
         ))}
       </div>
+
       <div className={styles.mutations}>
         <h2 className={styles.title}>Mutacijos</h2>
         <p className={styles.subtitle}>Norėdami pamatyti mutaciją, pasirinkite raidę</p>
