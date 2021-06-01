@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 import styles from "./GenomeFont.module.scss";
 
@@ -41,17 +41,19 @@ import z from "assets/images/letter-anatomy/z.png";
 import ž from "assets/images/letter-anatomy/ž.png";
 import genomasFont from "assets/fonts/Genomas.zip";
 
-const FONT_SIZE_OPTIONS = ["24 px", "48 px", "65 px", "105 px"];
+const FONT_SIZE_OPTIONS = [
+  { value: "24px", label: "Mažiukas" },
+  { value: "48px", label: "Mažas" },
+  { value: "65px", label: "Normalus" },
+  { value: "105px", label: "Didelis" },
+  { value: "140px", label: "Milžiniškas" },
+];
 
 const GenomeFont: React.FC = () => {
-  const [fontSize, setFontSize] = React.useState<string>("48 px");
+  const [fontSize, setFontSize] = React.useState<string>("48px");
 
   const handleFontSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFontSize(event.target.value);
-  };
-
-  const textAreaStyle = {
-    fontSize: fontSize.replace(" ", ""),
   };
 
   const anatomyImageProps: Partial<React.ImgHTMLAttributes<HTMLImageElement>> = {
@@ -61,15 +63,15 @@ const GenomeFont: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles["font-size-container"]}>
-        {FONT_SIZE_OPTIONS.map((option) => (
-          <label key={option} className={styles["radio-wrapper"]}>
-            {option}
+        {FONT_SIZE_OPTIONS.map(({ value, label }) => (
+          <label key={value} className={styles["radio-wrapper"]}>
+            {label}
             <input
               type="radio"
-              id={option}
-              name={option}
-              value={option}
-              checked={fontSize === option}
+              id={value}
+              name={value}
+              value={value}
+              checked={fontSize === value}
               className={styles.input}
               onChange={handleFontSizeChange}
             />
@@ -80,7 +82,7 @@ const GenomeFont: React.FC = () => {
 
       <textarea
         className={styles.textarea}
-        style={textAreaStyle}
+        style={{ fontSize }}
         placeholder="Paeksperimentuok"
         spellCheck={false}
         autoCapitalize="off"
@@ -88,7 +90,7 @@ const GenomeFont: React.FC = () => {
       />
 
       <div className={styles.download}>
-        <a href={genomasFont} className={styles['download-link']}>
+        <a href={genomasFont} className={styles["download-link"]}>
           <FontAwesomeIcon icon={faArrowAltCircleDown} />
         </a>
       </div>
