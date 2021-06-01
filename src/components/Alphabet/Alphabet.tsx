@@ -1,12 +1,16 @@
 import React from "react";
 import { generatePath, Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
-import classNames from "classnames";
 
 import { Letter } from "components/Letter/Letter";
 import { PATH } from "constants/paths";
 import { SVG_LETTERS } from "constants/letters";
 import { SvgLetterConfig } from "models/letter-config";
+
+import monosomyImage from "assets/images/mutations/monosomy.png";
+import trisomyImage from "assets/images/mutations/trisomy.png";
+import pointImage from "assets/images/mutations/point.png";
+import mutagenImage from "assets/images/mutations/mutagen.png";
 
 import styles from "./Alphabet.module.scss";
 
@@ -76,7 +80,7 @@ const Alphabet: React.FC = () => {
       </div>
       <div className={styles.mutations}>
         <h2 className={styles.title}>Mutacijos</h2>
-        <p className={styles.subtitle}>Norėdami pamatyti mutaciją,pasirinkite raidę</p>
+        <p className={styles.subtitle}>Norėdami pamatyti mutaciją, pasirinkite raidę</p>
         <div className={styles.mutation}>
           <div className={styles["mutation-info"]}>
             <div className={styles["mutation-header"]}>
@@ -90,7 +94,12 @@ const Alphabet: React.FC = () => {
               pasitaikantis 3 chromosomų skaičius.
             </p>
           </div>
-          <div className={styles.image}>*Bus ikona*</div>
+          <div className={styles.image}>
+            <div className={styles["image-circle"]}>
+              <img src={monosomyImage} alt="monosomija" className={styles["monosomy-image"]} />
+              <img src={trisomyImage} alt="trisomija" className={styles["trisomy-image"]} />
+            </div>
+          </div>
         </div>
 
         <div className={styles.mutation}>
@@ -105,24 +114,32 @@ const Alphabet: React.FC = () => {
               nukleotidai.
             </p>
           </div>
-          <div className={styles.image}>*Bus ikona*</div>
+          <div className={styles.image}>
+            <div className={styles["image-circle"]}>
+              <img src={pointImage} alt="taškinė genų mutacija" />
+            </div>
+          </div>
         </div>
 
         <div className={styles.mutation}>
-          <div className={styles.image}>*Bus ikona*</div>
           <div className={styles["mutation-info"]}>
             <div className={styles["mutation-header"]}>
-              <div className={classNames(styles["mutation-line"], styles["mutation-line--right"])} />
-              <h3 className={classNames(styles["mutation-title"], styles["mutation-title--right"])}>
+              <h3 className={styles["mutation-title"]}>
                 Aplinkos mutagenai, dar kitaip vadinami daugiaveiksmės-kompleksinės ligos
               </h3>
+              <div className={styles["mutation-line"]} />
             </div>
-            <p className={classNames(styles["mutation-description"], styles["mutation-description--right"])}>
+            <p className={styles["mutation-description"]}>
               Aplinkos mutagenai - nepaveldimi fenotipo pokyčiai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos
               mutagenas tai esantys veiksniai organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas
               organizmas yra veikiamas aplinkos sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas,
               paveikti organizmą neigiamai, arba naudingai.
             </p>
+          </div>
+          <div className={styles.image}>
+            <div className={styles["image-circle"]}>
+              <img src={mutagenImage} alt="mutageno mutacija" className={styles["mutagen-image"]} />
+            </div>
           </div>
         </div>
       </div>

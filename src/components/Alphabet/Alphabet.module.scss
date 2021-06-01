@@ -1,11 +1,5 @@
 @import "styles/scss-vars.scss";
 
-$mutation-info-width: 397px;
-$mutation-title-reduced-width: 347px;
-$image-width: 340px;
-$line-padding-left: 23px;
-$line-padding-right: 23px;
-
 .alphabet {
   position: absolute;
   left: 0;
@@ -90,6 +84,7 @@ $line-padding-right: 23px;
 
   .mutation {
     display: flex;
+    align-items: center;
     max-width: 1200px;
     margin-top: 60px;
     margin-left: auto;
@@ -130,15 +125,10 @@ $line-padding-right: 23px;
     }
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      flex: 0 0 $mutation-title-reduced-width;
-      width: $mutation-title-reduced-width;
+      flex: 0 0 347px;
+      width: 347px;
       font-size: 18px;
       line-height: 21px;
-
-      &--right {
-        flex: 0 0 $mutation-info-width;
-        width: $mutation-info-width;
-      }
     }
   }
 
@@ -147,14 +137,9 @@ $line-padding-right: 23px;
     width: 100%;
     height: 1px;
     background-color: $color-white;
-    margin-top: 13px;
-    margin-left: $line-padding-left;
-    margin-right: $mutation-info-width - $image-width + $line-padding-right;
-
-    &--right {
-      margin-left: $mutation-title-reduced-width - $image-width + $line-padding-left;
-      margin-right: $line-padding-right;
-    }
+    margin-top: 11px;
+    margin-left: 23px;
+    margin-right: 39px;
 
     @media only screen and (min-width: $breakpoint-desktop) {
       display: block;
@@ -174,26 +159,44 @@ $line-padding-right: 23px;
     }
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      width: $mutation-info-width;
+      width: 397px;
       font-size: 18px;
       line-height: 21px;
-
-      &--right {
-        margin-left: auto;
-      }
     }
   }
 
   .image {
     display: none;
-    flex: 0 0 $image-width;
-    font-size: 48px;
-    text-align: center;
-    background-color: $color-black;
-    color: $color-white;
 
     @media only screen and (min-width: $breakpoint-desktop) {
       display: block;
     }
+  }
+
+  .image-circle {
+    position: relative;
+    width: 263px;
+    height: 263px;
+    background-color: $color-white;
+    border: 5px solid $color-yellow;
+    border-radius: 50%;
+  }
+
+  .monosomy-image {
+    position: absolute;
+    left: 44px;
+    top: 55px;
+  }
+
+  .trisomy-image {
+    position: absolute;
+    left: 123px;
+    top: 130px;
+  }
+
+  .mutagen-image {
+    position: absolute;
+    left: 30px;
+    top: 14px;
   }
 }
