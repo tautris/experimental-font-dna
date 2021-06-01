@@ -1,9 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 import styles from "./GenomeFont.module.scss";
 
+import downloadIcon from "assets/images/download.png";
 import a from "assets/images/letter-anatomy/a.png";
 import ą from "assets/images/letter-anatomy/ą.png";
 import b from "assets/images/letter-anatomy/b.png";
@@ -91,7 +90,7 @@ const GenomeFont: React.FC = () => {
 
       <div className={styles.download}>
         <a href={genomasFont} className={styles["download-link"]}>
-          <FontAwesomeIcon icon={faArrowAltCircleDown} />
+          <img src={downloadIcon} alt="atsisiųsti" />
         </a>
       </div>
 
