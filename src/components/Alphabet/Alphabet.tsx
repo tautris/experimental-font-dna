@@ -128,7 +128,7 @@ const Alphabet: React.FC = () => {
               <div className={styles["mutation-line"]} />
             </div>
             <p className={styles["mutation-description"]}>
-              Taškinė genų mutacija tai atskirų genų pakitimas. Mutacijų atsiradimo metu vyksta DNR grandinės molekulės
+              Taškinė genų mutacija tai atskiro geno pakitimas. Mutacijų atsiradimo metu vyksta DNR grandinės molekulės
               struktūros pokyčiai, kai vieni nukleotidai yra pakeičiami į kitus. Padvigubėja geno fragmentas ar
               nukleotidai.
             </p>
@@ -149,10 +149,10 @@ const Alphabet: React.FC = () => {
               <div className={styles["mutation-line"]} />
             </div>
             <p className={styles["mutation-description"]}>
-              Aplinkos mutagenai - nepaveldimi fenotipo pokyčiai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos
-              mutagenas tai esantys veiksniai organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas
-              organizmas yra veikiamas aplinkos sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas,
-              paveikti organizmą neigiamai, arba naudingai.
+              Aplinkos mutagenai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos mutagenas tai esantys veiksniai
+              organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas organizmas yra veikiamas aplinkos
+              sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas, paveikti organizmą neigiamai, arba
+              naudingai.
             </p>
           </div>
           <div className={styles.image}>
