@@ -118,11 +118,17 @@
     }
   }
 
+  .anatomy-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .anatomy-image {
     width: 100%;
 
-    @media only screen and (min-width: $breakpoint-mobile) {
-      margin-left: -50px;
+    @media only screen and (min-width: $breakpoint-desktop) {
+      width: 60%;
     }
   }
 }

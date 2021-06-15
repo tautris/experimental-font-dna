@@ -98,41 +98,43 @@ const GenomeFont: React.FC = () => {
         <h1 className={styles["anatomy-title"]}>Raidžių anatomija</h1>
       </div>
 
-      <img src={a} style={{ marginTop: "" }} {...anatomyImageProps} />
-      <img src={ą} style={{ marginTop: "-80px" }} {...anatomyImageProps} />
-      <img src={b} style={{ marginTop: "45px" }} {...anatomyImageProps} />
-      <img src={c} style={{ marginTop: "-50px" }} {...anatomyImageProps} />
-      <img src={č} style={{ marginTop: "-20px" }} {...anatomyImageProps} />
-      <img src={d} style={{ marginTop: "-5px" }} {...anatomyImageProps} />
-      <img src={e} style={{ marginTop: "-58px" }} {...anatomyImageProps} />
-      <img src={ę} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={ė} style={{ marginTop: "10px" }} {...anatomyImageProps} />
-      <img src={f} {...anatomyImageProps} />
-      <img src={g} style={{ marginTop: "8px" }} {...anatomyImageProps} />
-      <img src={h} style={{ marginTop: "70px" }} {...anatomyImageProps} />
-      <img src={i} style={{ marginTop: "-20px" }} {...anatomyImageProps} />
-      <img src={į} style={{ marginTop: "-20px" }} {...anatomyImageProps} />
-      <img src={j} style={{ marginTop: "8px" }} {...anatomyImageProps} />
-      <img src={k} style={{ marginTop: "68px" }} {...anatomyImageProps} />
-      <img src={l} style={{ marginTop: "-3px" }} {...anatomyImageProps} />
-      <img src={m} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={n} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={o} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={p} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={q} style={{ marginTop: "10px" }} {...anatomyImageProps} />
-      <img src={r} style={{ marginTop: "10px" }} {...anatomyImageProps} />
-      <img src={s} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={š} style={{ marginTop: "-22px" }} {...anatomyImageProps} />
-      <img src={t} style={{ marginTop: "-2px" }} {...anatomyImageProps} />
-      <img src={u} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={ū} style={{ marginTop: "-27px" }} {...anatomyImageProps} />
-      <img src={ų} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={v} style={{ marginTop: "-28px" }} {...anatomyImageProps} />
-      <img src={w} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={x} style={{ marginTop: "-63px" }} {...anatomyImageProps} />
-      <img src={y} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
-      <img src={z} style={{ marginTop: "10px" }} {...anatomyImageProps} />
-      <img src={ž} style={{ marginTop: "-22px" }} {...anatomyImageProps} />
+      <div className={styles["anatomy-image-container"]}>
+        <img src={a} {...anatomyImageProps} />
+        <img src={ą} {...anatomyImageProps} />
+        <img src={b} {...anatomyImageProps} />
+        <img src={c} {...anatomyImageProps} />
+        <img src={č} {...anatomyImageProps} />
+        <img src={d} {...anatomyImageProps} />
+        <img src={e} {...anatomyImageProps} />
+        <img src={ę} {...anatomyImageProps} />
+        <img src={ė} {...anatomyImageProps} />
+        <img src={f} {...anatomyImageProps} />
+        <img src={g} {...anatomyImageProps} />
+        <img src={h} style={{ marginTop: "70px" }} {...anatomyImageProps} />
+        <img src={i} style={{ marginTop: "-20px" }} {...anatomyImageProps} />
+        <img src={į} style={{ marginTop: "-20px" }} {...anatomyImageProps} />
+        <img src={j} style={{ marginTop: "8px" }} {...anatomyImageProps} />
+        <img src={k} style={{ marginTop: "68px" }} {...anatomyImageProps} />
+        <img src={l} style={{ marginTop: "-3px" }} {...anatomyImageProps} />
+        <img src={m} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={n} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={o} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={p} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={q} style={{ marginTop: "10px" }} {...anatomyImageProps} />
+        <img src={r} style={{ marginTop: "10px" }} {...anatomyImageProps} />
+        <img src={s} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={š} style={{ marginTop: "-22px" }} {...anatomyImageProps} />
+        <img src={t} style={{ marginTop: "-2px" }} {...anatomyImageProps} />
+        <img src={u} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={ū} style={{ marginTop: "-27px" }} {...anatomyImageProps} />
+        <img src={ų} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={v} style={{ marginTop: "-28px" }} {...anatomyImageProps} />
+        <img src={w} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={x} style={{ marginTop: "-63px" }} {...anatomyImageProps} />
+        <img src={y} style={{ marginTop: "-60px" }} {...anatomyImageProps} />
+        <img src={z} style={{ marginTop: "10px" }} {...anatomyImageProps} />
+        <img src={ž} style={{ marginTop: "-22px" }} {...anatomyImageProps} />
+      </div>
     </div>
   );
 };
