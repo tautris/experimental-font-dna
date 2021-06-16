@@ -10,7 +10,7 @@ import { SvgLetterConfig } from "models/letter-config";
 
 import monosomyImage from "assets/images/mutations/monosomy.png";
 import trisomyImage from "assets/images/mutations/trisomy.png";
-import pointImage from "assets/images/mutations/point.png";
+import pointImage from "assets/images/mutations/point.svg";
 import mutagenImage from "assets/images/mutations/mutagen.png";
 
 import styles from "./Alphabet.module.scss";
@@ -134,9 +134,7 @@ const Alphabet: React.FC = () => {
             </p>
           </div>
           <div className={styles.image}>
-            <div className={styles["image-circle"]}>
-              <img src={pointImage} alt="taškinė genų mutacija" />
-            </div>
+            <img src={pointImage} alt="taškinė genų mutacija" />
           </div>
         </div>
 
