@@ -32,7 +32,10 @@ const LetterExposition: React.FC = () => {
           <AlphabetNavigation selectedLetter={letterConfig.letter} language={language} />
         </div>
         <Link
-          to={{ pathname: generatePath(PATH.ALPHABET, { language }), state: { isWithoutAnimation: true } }}
+          to={{
+            pathname: generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language }),
+            state: { isWithoutAnimation: true },
+          }}
           className={styles["alphabet-link"]}
         >
           &#8249; į abėcelę

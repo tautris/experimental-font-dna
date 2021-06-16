@@ -80,7 +80,6 @@ const Alphabet: React.FC = () => {
   };
 
   const isWithoutAnimation = state?.isWithoutAnimation;
-  console.log("location state", state);
 
   return (
     <div>
