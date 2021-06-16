@@ -1,26 +1,26 @@
 import React from "react";
-import { useRouteMatch } from "react-router";
-import { generatePath, Link } from "react-router-dom";
+import { generatePath, Link, useParams } from "react-router-dom";
 
 import { AlphabetNavigation } from "components/AlphabetNavigation/AlphabetNavigation";
 import { SVG_LETTERS } from "constants/letters";
 import { PATH } from "constants/paths";
+import { LanguageType } from "constants/language";
 
 import { LetterExpositionContent } from "./LetterExpositionContent";
 
 import styles from "./LetterExposition.module.scss";
 
 interface UrlParams {
+  language: LanguageType;
   letter: string;
 }
 
 const LetterExposition: React.FC = () => {
-  const { params } = useRouteMatch<UrlParams>();
+  const { language, letter } = useParams<UrlParams>();
 
-  const letterConfig = SVG_LETTERS.find((letterConfig) => letterConfig.letter === params.letter);
+  const letterConfig = SVG_LETTERS.find((letterConfig) => letterConfig.letter === letter);
 
   if (!letterConfig) {
-    // TODO: what to do here
     return null;
   }
 
@@ -29,13 +29,13 @@ const LetterExposition: React.FC = () => {
       <LetterExpositionContent letterConfig={letterConfig} />
       <div className={styles.navigation}>
         <div className={styles["alphabet-navigation"]}>
-          <AlphabetNavigation selectedLetter={letterConfig.letter} />
+          <AlphabetNavigation selectedLetter={letterConfig.letter} language={language} />
         </div>
         <Link
-          to={{ pathname: generatePath(PATH.ALPHABET), state: { isWithoutAnimation: true } }}
+          to={{ pathname: generatePath(PATH.ALPHABET, { language }), state: { isWithoutAnimation: true } }}
           className={styles["alphabet-link"]}
         >
-          &#8249; Į abėcėlę
+          &#8249; į abėcelę
         </Link>
       </div>
     </div>

@@ -1,11 +1,12 @@
 import React from "react";
-import { generatePath, Link, useLocation } from "react-router-dom";
+import { generatePath, Link, useHistory, useLocation, useParams } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import classNames from "classnames";
 
 import { Letter } from "components/Letter/Letter";
+import { RadioInput } from "components/RadioInput/RadioInput";
 import { PATH } from "constants/paths";
-import { SVG_LETTERS } from "constants/letters";
+import { LITHUANIAN_SVG_LETTERS, ENGLISH_SVG_LETTERS } from "constants/letters";
 import { SvgLetterConfig } from "models/letter-config";
 
 import monosomyImage from "assets/images/mutations/monosomy.png";
@@ -14,42 +15,35 @@ import pointImage from "assets/images/mutations/point.svg";
 import mutagenImage from "assets/images/mutations/mutagen.png";
 
 import styles from "./Alphabet.module.scss";
+import { LanguageType } from "constants/language";
 
 const DURATION_MS = 200;
 const LETTER_INTERVAL_MS = 150;
+
+const LANGUAGE_OPTIONS = [
+  { value: LanguageType.LT, label: LanguageType.LT },
+  { value: LanguageType.EN, label: LanguageType.EN },
+];
 
 interface LocationState {
   isWithoutAnimation: boolean;
 }
 
+interface UrlParams {
+  language: LanguageType;
+}
+
 const Alphabet: React.FC = () => {
   const { state } = useLocation<LocationState>();
+  const { language } = useParams<UrlParams>();
+  const history = useHistory();
 
   const [letters, setLetters] = React.useState<SvgLetterConfig[]>([]);
+
   const timeoutRef = React.useRef<NodeJS.Timeout>();
 
-  const transitions = useTransition(letters, {
-    from: { positionY: -300, opacity: 0 },
-    enter: { positionY: 0, opacity: 1 },
-    leave: { positionY: -300, opacity: 0 },
-    config: {
-      duration: DURATION_MS,
-    },
-  });
-
-  const renderRemainingLetters = (index = 0) => {
-    if (index >= SVG_LETTERS.length) {
-      return;
-    }
-
-    setLetters((currentLetters) => [...currentLetters, SVG_LETTERS[index]]);
-
-    timeoutRef.current = setTimeout(() => {
-      renderRemainingLetters(index + 1);
-    }, LETTER_INTERVAL_MS);
-  };
-
   React.useEffect(() => {
+    setLetters([]);
     renderRemainingLetters();
 
     return () => {
@@ -57,12 +51,51 @@ const Alphabet: React.FC = () => {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, []);
+  }, [language]);
+
+  const transitions = useTransition(letters, {
+    from: { positionY: -300, opacity: 0 },
+    enter: { positionY: 0, opacity: 1 },
+    config: {
+      duration: DURATION_MS,
+    },
+  });
+
+  const svgLetters = language === LanguageType.LT ? LITHUANIAN_SVG_LETTERS : ENGLISH_SVG_LETTERS;
+
+  const renderRemainingLetters = (index = 0) => {
+    if (index >= svgLetters.length) {
+      return;
+    }
+
+    setLetters((currentLetters) => [...currentLetters, svgLetters[index]]);
+
+    timeoutRef.current = setTimeout(() => {
+      renderRemainingLetters(index + 1);
+    }, LETTER_INTERVAL_MS);
+  };
+
+  const handleLanguageChange = (value: string) => {
+    history.replace(generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: value }));
+  };
 
   const isWithoutAnimation = state?.isWithoutAnimation;
+  console.log("location state", state);
 
   return (
     <div>
+      <div className={styles["language-container"]}>
+        {LANGUAGE_OPTIONS.map(({ value, label }) => (
+          <RadioInput
+            key={value}
+            value={value}
+            label={label}
+            isChecked={value === language}
+            onChange={handleLanguageChange}
+          />
+        ))}
+      </div>
+
       {!isWithoutAnimation && (
         <div className={styles.alphabet}>
           {transitions(({ positionY, opacity }, letterConfig) => (
@@ -74,6 +107,7 @@ const Alphabet: React.FC = () => {
             >
               <Link
                 to={generatePath(PATH.LETTER, {
+                  language,
                   letter: letterConfig.letter,
                 })}
               >
@@ -85,10 +119,11 @@ const Alphabet: React.FC = () => {
       )}
 
       <div className={classNames(isWithoutAnimation ? styles["static-alphabet"] : styles["alphabet-placeholder"])}>
-        {SVG_LETTERS.map((letterConfig) => (
+        {svgLetters.map((letterConfig) => (
           <Link
             key={letterConfig.letter}
             to={generatePath(PATH.LETTER, {
+              language,
               letter: letterConfig.letter,
             })}
           >

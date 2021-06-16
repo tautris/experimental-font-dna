@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import { Switch, Route, Redirect, useLocation, generatePath } from "react-router-dom";
 
 import { Header } from "components/Header/Header";
 import { HomePage } from "components/HomePage/HomePage";
@@ -12,6 +12,7 @@ import { LetterExposition } from "components/LetterExposition/LetterExposition";
 import { GenomeFont } from "components/GenomeFont/GenomeFont";
 
 import { PATH } from "constants/paths";
+import { LanguageType } from "constants/language";
 
 import styles from "./App.module.scss";
 
@@ -32,7 +33,7 @@ const App: React.FC = () => {
             <Route path={PATH.LETTER}>
               <LetterExposition />
             </Route>
-            <Route path={PATH.ALPHABET}>
+            <Route path={PATH.ALPHABET_WITH_LANGUAGE}>
               <Alphabet />
             </Route>
             <Route path={PATH.GENOME_FONT}>
@@ -41,7 +42,11 @@ const App: React.FC = () => {
             <Route path={PATH.ABOUT}>
               <About />
             </Route>
-            <Route render={() => <Redirect to={PATH.HOME} />} />
+            <Redirect
+              path={PATH.ALPHABET}
+              to={generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: LanguageType.LT })}
+            />
+            <Redirect to={PATH.HOME} />
           </Switch>
         </div>
         {!isHomePage && <Footer />}

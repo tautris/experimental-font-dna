@@ -1,11 +1,12 @@
 const SLUGS = {
-    ALPHABET: 'abecele'
+  ALPHABET: "abecele",
 };
 
 export const PATH = {
-    HOME: '/',
-    ALPHABET: `/${SLUGS.ALPHABET}`,
-    LETTER: `/${SLUGS.ALPHABET}/:letter`,
-    GENOME_FONT: '/genomo-sriftas',
-    ABOUT: '/apie',
+  HOME: "/",
+  ALPHABET: `/${SLUGS.ALPHABET}`,
+  ALPHABET_WITH_LANGUAGE: `/${SLUGS.ALPHABET}/:language`,
+  LETTER: `/${SLUGS.ALPHABET}/:language/:letter`,
+  GENOME_FONT: "/genomo-sriftas",
+  ABOUT: "/apie",
 };

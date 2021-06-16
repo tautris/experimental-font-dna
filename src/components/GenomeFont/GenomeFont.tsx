@@ -1,5 +1,7 @@
 import React from "react";
 
+import { RadioInput } from "components/RadioInput/RadioInput";
+
 import styles from "./GenomeFont.module.scss";
 
 import a from "assets/images/letter-anatomy/a.png";
@@ -51,10 +53,6 @@ const FONT_SIZE_OPTIONS = [
 const GenomeFont: React.FC = () => {
   const [fontSize, setFontSize] = React.useState<string>("48px");
 
-  const handleFontSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFontSize(event.target.value);
-  };
-
   const anatomyImageProps: Partial<React.ImgHTMLAttributes<HTMLImageElement>> = {
     className: styles["anatomy-image"],
   };
@@ -64,19 +62,7 @@ const GenomeFont: React.FC = () => {
       <div className={styles.section}>
         <div className={styles["font-size-container"]}>
           {FONT_SIZE_OPTIONS.map(({ value, label }) => (
-            <label key={value} className={styles["radio-wrapper"]}>
-              {label}
-              <input
-                type="radio"
-                id={value}
-                name={value}
-                value={value}
-                checked={fontSize === value}
-                className={styles.input}
-                onChange={handleFontSizeChange}
-              />
-              <span className={styles.checkmark}></span>
-            </label>
+            <RadioInput key={value} value={value} label={label} isChecked={value === fontSize} onChange={setFontSize} />
           ))}
         </div>
 

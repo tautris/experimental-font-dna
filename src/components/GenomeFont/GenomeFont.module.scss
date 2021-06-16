@@ -14,53 +14,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-    .radio-wrapper {
-      display: flex;
-      align-items: center;
-      position: relative;
-      padding-left: $spacer-xl;
-      margin-bottom: $spacer-s;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      color: $color-white;
-      margin-right: $spacer-xl;
-      height: $spacer-l;
-
-      .input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-
-        &:checked ~ .checkmark {
-          background-color: $color-yellow;
-        }
-
-        &:checked ~ .checkmark:after {
-          display: block;
-        }
-      }
-
-      .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: $color-white;
-        border-radius: 50%;
-        border: 2px solid $color-white;
-      }
-
-      &:hover {
-        .input ~ .checkmark {
-          background-color: darken($color-yellow, 20%);
-        }
-      }
-    }
   }
 
   .textarea {
