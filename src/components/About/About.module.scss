@@ -1,27 +1,18 @@
 @import "styles/scss-vars.scss";
 
-$heading-margin-top-mobile: 20px;
-$heading-font-size-mobile: 30px;
-$heading-line-height-mobile: $heading-font-size-mobile * 1.5;
-
-$heading-margin-top-tablet: 40px;
-$heading-font-size-tablet: 65px;
-$heading-line-height-tablet: $heading-font-size-tablet * 1.5;
-
-$heading-margin-top-desktop: 80px;
-$heading-font-size-desktop: 120px;
-$heading-line-height-desktop: 143px;
-
 .container {
   display: flex;
+  padding-top: 20px;
   padding-bottom: $spacer-xxl;
 
   @media only screen and (min-width: $breakpoint-mobile) {
+    padding-top: 40px;
     padding-left: $spacer-xxl;
     padding-right: $spacer-xxl;
   }
 
   @media only screen and (min-width: $breakpoint-large-desktop) {
+    padding-top: 80px;
     padding-left: 70px;
     padding-right: 70px;
   }
@@ -40,21 +31,17 @@ $heading-line-height-desktop: 143px;
   }
 
   .heading {
-    margin-top: $heading-margin-top-mobile;
-    font-size: $heading-font-size-mobile;
-    line-height: $heading-line-height-mobile;
+    margin-top: 0;
+    font-size: 30px;
     color: $color-white;
 
     @media only screen and (min-width: $breakpoint-mobile) {
-      margin-top: $heading-margin-top-tablet;
-      font-size: $heading-font-size-tablet;
-      line-height: $heading-line-height-tablet;
+      font-size: 65px;
     }
 
     @media only screen and (min-width: $breakpoint-large-desktop) {
-      margin-top: $heading-margin-top-desktop;
-      font-size: $heading-font-size-desktop;
-      line-height: $heading-line-height-desktop;
+      font-size: 120px;
+      line-height: 143px;
     }
   }
 
@@ -80,13 +67,11 @@ $heading-line-height-desktop: 143px;
 
     @media only screen and (min-width: $breakpoint-mobile) {
       display: block;
-      margin-top: $heading-margin-top-tablet + $heading-line-height-tablet - $heading-font-size-tablet;
       margin-left: 60px;
     }
 
     @media only screen and (min-width: $breakpoint-large-desktop) {
       display: block;
-      margin-top: $heading-margin-top-desktop + $heading-line-height-desktop - $heading-font-size-desktop;
       margin-left: 114px;
     }
   }
