@@ -1,5 +1,11 @@
 @import "styles/scss-vars.scss";
 
+@mixin radio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .container {
   margin-top: 100px;
   padding-bottom: 60px;
@@ -10,10 +16,13 @@
     margin-right: auto;
   }
 
+  .font-type-container {
+    @include radio-container;
+  }
+
   .font-size-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 50px;
+    @include radio-container;
   }
 
   .textarea {
