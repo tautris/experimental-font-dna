@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/experimental-font-dna/static/css/main.a15321d1.chunk.css",
+    "main.css": "/experimental-font-dna/static/css/main.58219f01.chunk.css",
     "main.js": "/experimental-font-dna/static/js/main.fc347db0.chunk.js",
     "main.js.map": "/experimental-font-dna/static/js/main.fc347db0.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.aa28af48.js",
@@ -10,7 +10,7 @@
     "static/js/3.62383129.chunk.js": "/experimental-font-dna/static/js/3.62383129.chunk.js",
     "static/js/3.62383129.chunk.js.map": "/experimental-font-dna/static/js/3.62383129.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
-    "static/css/main.a15321d1.chunk.css.map": "/experimental-font-dna/static/css/main.a15321d1.chunk.css.map",
+    "static/css/main.58219f01.chunk.css.map": "/experimental-font-dna/static/css/main.58219f01.chunk.css.map",
     "static/js/2.3f77fb8d.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.3f77fb8d.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/experimental-font-dna/static/media/Genomas.a0144134.woff",
     "static/media/Genomas.8ed927c9.zip": "/experimental-font-dna/static/media/Genomas.8ed927c9.zip",
@@ -61,7 +61,7 @@
   "entrypoints": [
     "static/js/runtime-main.aa28af48.js",
     "static/js/2.3f77fb8d.chunk.js",
-    "static/css/main.a15321d1.chunk.css",
+    "static/css/main.58219f01.chunk.css",
     "static/js/main.fc347db0.chunk.js"
   ]
 }
