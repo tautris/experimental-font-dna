@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/experimental-font-dna/static/css/main.58219f01.chunk.css",
-    "main.js": "/experimental-font-dna/static/js/main.fc347db0.chunk.js",
-    "main.js.map": "/experimental-font-dna/static/js/main.fc347db0.chunk.js.map",
+    "main.css": "/experimental-font-dna/static/css/main.d4619766.chunk.css",
+    "main.js": "/experimental-font-dna/static/js/main.d5b102fc.chunk.js",
+    "main.js.map": "/experimental-font-dna/static/js/main.d5b102fc.chunk.js.map",
     "runtime-main.js": "/experimental-font-dna/static/js/runtime-main.aa28af48.js",
     "runtime-main.js.map": "/experimental-font-dna/static/js/runtime-main.aa28af48.js.map",
-    "static/js/2.3f77fb8d.chunk.js": "/experimental-font-dna/static/js/2.3f77fb8d.chunk.js",
-    "static/js/2.3f77fb8d.chunk.js.map": "/experimental-font-dna/static/js/2.3f77fb8d.chunk.js.map",
+    "static/js/2.85698c4d.chunk.js": "/experimental-font-dna/static/js/2.85698c4d.chunk.js",
+    "static/js/2.85698c4d.chunk.js.map": "/experimental-font-dna/static/js/2.85698c4d.chunk.js.map",
     "static/js/3.62383129.chunk.js": "/experimental-font-dna/static/js/3.62383129.chunk.js",
     "static/js/3.62383129.chunk.js.map": "/experimental-font-dna/static/js/3.62383129.chunk.js.map",
     "index.html": "/experimental-font-dna/index.html",
-    "static/css/main.58219f01.chunk.css.map": "/experimental-font-dna/static/css/main.58219f01.chunk.css.map",
-    "static/js/2.3f77fb8d.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.3f77fb8d.chunk.js.LICENSE.txt",
+    "static/css/main.d4619766.chunk.css.map": "/experimental-font-dna/static/css/main.d4619766.chunk.css.map",
+    "static/js/2.85698c4d.chunk.js.LICENSE.txt": "/experimental-font-dna/static/js/2.85698c4d.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/experimental-font-dna/static/media/Genomas.a0144134.woff",
     "static/media/Genomas.8ed927c9.zip": "/experimental-font-dna/static/media/Genomas.8ed927c9.zip",
     "static/media/a.55bd1a6b.png": "/experimental-font-dna/static/media/a.55bd1a6b.png",
@@ -60,8 +60,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.aa28af48.js",
-    "static/js/2.3f77fb8d.chunk.js",
-    "static/css/main.58219f01.chunk.css",
-    "static/js/main.fc347db0.chunk.js"
+    "static/js/2.85698c4d.chunk.js",
+    "static/css/main.d4619766.chunk.css",
+    "static/js/main.d5b102fc.chunk.js"
   ]
 }
