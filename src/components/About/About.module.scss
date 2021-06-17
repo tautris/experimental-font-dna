@@ -62,17 +62,18 @@
     }
   }
 
-  .dna-image {
+  .image-container {
     display: none;
+    flex: 1;
 
-    @media only screen and (min-width: $breakpoint-mobile) {
+    @media only screen and (min-width: 740px) {
       display: block;
-      margin-left: 60px;
     }
+  }
 
-    @media only screen and (min-width: $breakpoint-large-desktop) {
-      display: block;
-      margin-left: 114px;
-    }
+  .dna-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

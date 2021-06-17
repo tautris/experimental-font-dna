@@ -44,7 +44,7 @@ const About: React.FC = () => {
           įtaką žmogus daro šriftui.
         </p>
       </div>
-      <div>
+      <div className={styles["image-container"]}>
         <img src={dnaImage} alt="DNA molecule" className={styles["dna-image"]} />
       </div>
     </div>
