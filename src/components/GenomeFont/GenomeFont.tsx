@@ -42,15 +42,6 @@ import ž from "assets/images/letter-anatomy/ž.png";
 import downloadIcon from "assets/images/download.png";
 import genomasFont from "assets/fonts/Genomas.zip";
 
-enum GenomeFontWeight {
-  NORMAL = "normal",
-  BOLD = "bold",
-}
-const FONT_WEIGHT_OPTIONS = [
-  { value: GenomeFontWeight.NORMAL, label: "DNR" },
-  { value: GenomeFontWeight.BOLD, label: "Mutavusi" },
-];
-
 const FONT_SIZE_OPTIONS = [
   { value: "24px", label: "Mažiukas" },
   { value: "48px", label: "Mažas" },
@@ -61,7 +52,6 @@ const FONT_SIZE_OPTIONS = [
 
 const GenomeFont: React.FC = () => {
   const [fontSize, setFontSize] = React.useState<string>("48px");
-  const [fontWeight, setFontWeight] = React.useState<GenomeFontWeight>(GenomeFontWeight.NORMAL);
 
   const anatomyImageProps: Partial<React.ImgHTMLAttributes<HTMLImageElement>> = {
     className: styles["anatomy-image"],
@@ -70,20 +60,6 @@ const GenomeFont: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
-        <div className={styles["font-type-container"]}>
-          {FONT_WEIGHT_OPTIONS.map(({ value, label }) => (
-            <RadioInput
-              key={value}
-              value={value}
-              label={label}
-              isChecked={value === fontWeight}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              onChange={setFontWeight}
-            />
-          ))}
-        </div>
-
         <div className={styles["font-size-container"]}>
           {FONT_SIZE_OPTIONS.map(({ value, label }) => (
             <RadioInput key={value} value={value} label={label} isChecked={value === fontSize} onChange={setFontSize} />
@@ -92,7 +68,7 @@ const GenomeFont: React.FC = () => {
 
         <textarea
           className={styles.textarea}
-          style={{ fontSize, fontWeight }}
+          style={{ fontSize }}
           placeholder="Paeksperimentuok"
           spellCheck={false}
           autoCapitalize="off"
