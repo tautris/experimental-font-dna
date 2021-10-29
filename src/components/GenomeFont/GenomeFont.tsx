@@ -75,11 +75,11 @@ const GenomeFont: React.FC = () => {
           autoCorrect="off"
         />
 
-<!--         <div className={styles.download}>
-          <a href={genomasFont} className={styles["download-link"]}>
-            <img src={downloadIcon} alt="atsisiųsti" />
-          </a>
-        </div> -->
+        {/*<div className={styles.download}>
+           <a href={genomasFont} className={styles["download-link"]}>
+             <img src={downloadIcon} alt="atsisiųsti" />
+           </a>
+          </div> */}
 
         <h1 className={styles["anatomy-title"]}>Raidžių anatomija</h1>
       </div>
