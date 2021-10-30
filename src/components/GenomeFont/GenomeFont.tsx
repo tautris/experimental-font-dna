@@ -39,8 +39,8 @@ import x from "assets/images/letter-anatomy/x.png";
 import y from "assets/images/letter-anatomy/y.png";
 import z from "assets/images/letter-anatomy/z.png";
 import ž from "assets/images/letter-anatomy/ž.png";
-import downloadIcon from "assets/images/download.png";
-import genomasFont from "assets/fonts/Genomas.zip";
+// import downloadIcon from "assets/images/download.png";
+// import genomasFont from "assets/fonts/Genomas.zip";
 
 const FONT_SIZE_OPTIONS = [
   { value: "24px", label: "Mažiukas" },
