@@ -1,10 +1,10 @@
 import React from "react";
 import { generatePath, Link } from "react-router-dom";
 
-import { Letter } from "components/Letter/Letter";
-import { ENGLISH_SVG_LETTERS, LITHUANIAN_SVG_LETTERS } from "constants/letters";
-import { PATH } from "constants/paths";
-import { LanguageType } from "constants/language";
+import { Letter } from "@/components/Letter/Letter";
+import { ENGLISH_SVG_LETTERS, LITHUANIAN_SVG_LETTERS } from "@/constants/letters";
+import { PATH } from "@/constants/paths";
+import { LanguageType } from "@/constants/language";
 
 import styles from "./AlphabetNavigation.module.scss";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { generatePath, Link, useParams } from "react-router-dom";
 
-import { AlphabetNavigation } from "components/AlphabetNavigation/AlphabetNavigation";
-import { SVG_LETTERS } from "constants/letters";
-import { PATH } from "constants/paths";
-import { LanguageType } from "constants/language";
+import { AlphabetNavigation } from "@/components/AlphabetNavigation/AlphabetNavigation";
+import { SVG_LETTERS } from "@/constants/letters";
+import { PATH } from "@/constants/paths";
+import { LanguageType } from "@/constants/language";
 
 import { LetterExpositionContent } from "./LetterExpositionContent";
 

@@ -5,6 +5,7 @@ import styles from "./PageBackground.module.scss";
 
 interface Props {
   isHomePage: boolean;
+  children: React.ReactNode;
 }
 
 const PageBackground: React.FC<Props> = ({ isHomePage, children }) => (

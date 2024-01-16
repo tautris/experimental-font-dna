@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useSpring, useSprings, animated } from "react-spring/web";
+import { useSpring, useSprings, animated } from "react-spring";
 
-import { SvgLetterConfig } from "models/letter-config";
+import { SvgLetterConfig } from "@/models/letter-config";
 
 import styles from "./LetterExpositionContent.module.scss";
 

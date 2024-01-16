@@ -2,7 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { animated, config, useTransition } from "react-spring";
 
-const PageTransition: React.FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const PageTransition: React.FC<Props> = ({ children }) => {
   const { pathname } = useLocation();
 
   const transitions = useTransition(pathname, {

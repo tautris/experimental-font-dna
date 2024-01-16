@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import { SvgLetterConfig } from "models/letter-config";
+import { SvgLetterConfig } from "@/models/letter-config";
 
 import styles from "./Letter.module.scss";
 

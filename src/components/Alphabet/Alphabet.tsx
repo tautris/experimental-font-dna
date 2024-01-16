@@ -3,19 +3,19 @@ import { generatePath, Link, useHistory, useLocation, useParams } from "react-ro
 import { useTransition, animated } from "react-spring";
 import classNames from "classnames";
 
-import { Letter } from "components/Letter/Letter";
-import { RadioInput } from "components/RadioInput/RadioInput";
-import { PATH } from "constants/paths";
-import { LITHUANIAN_SVG_LETTERS, ENGLISH_SVG_LETTERS } from "constants/letters";
-import { SvgLetterConfig } from "models/letter-config";
+import { Letter } from "@/components/Letter/Letter";
+import { RadioInput } from "@/components/RadioInput/RadioInput";
+import { PATH } from "@/constants/paths";
+import { LITHUANIAN_SVG_LETTERS, ENGLISH_SVG_LETTERS } from "@/constants/letters";
+import { SvgLetterConfig } from "@/models/letter-config";
 
-import monosomyImage from "assets/images/mutations/monosomy.png";
-import trisomyImage from "assets/images/mutations/trisomy.png";
-import pointImage from "assets/images/mutations/point.svg";
-import mutagenImage from "assets/images/mutations/mutagen.png";
+import monosomyImage from "@/assets/images/mutations/monosomy.png";
+import trisomyImage from "@/assets/images/mutations/trisomy.png";
+import pointImage from "@/assets/images/mutations/point.svg";
+import mutagenImage from "@/assets/images/mutations/mutagen.png";
 
 import styles from "./Alphabet.module.scss";
-import { LanguageType } from "constants/language";
+import { LanguageType } from "@/constants/language";
 
 const DURATION_MS = 200;
 const LETTER_INTERVAL_MS = 150;
