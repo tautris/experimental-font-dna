@@ -44,6 +44,12 @@ jobs:
       - name: Build project
         run: yarn build
 
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
       - name: List output files
         run: ls -l
 
