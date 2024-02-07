@@ -62,6 +62,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: dist
       - name: List output files
         run: ls -l
       - name: Setup Pages
