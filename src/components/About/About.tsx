@@ -1,6 +1,6 @@
 import React from "react";
 
-import dnaImage from "assets/images/dna.svg";
+import dnaImage from "@/assets/images/dna.svg";
 
 import styles from "./About.module.scss";
 

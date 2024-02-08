@@ -2,9 +2,9 @@ import React from "react";
 import classNames from "classnames";
 import { Link, matchPath, useLocation } from "react-router-dom";
 
-import { PATH } from "constants/paths";
+import { PATH } from "@/constants/paths";
 
-import { isMobile } from "helpers/responsive";
+import { isMobile } from "@/helpers/responsive";
 
 import styles from "./Header.module.scss";
 

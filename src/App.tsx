@@ -1,18 +1,18 @@
 import React from "react";
 import { Switch, Route, Redirect, useLocation, generatePath } from "react-router-dom";
 
-import { Header } from "components/Header/Header";
-import { HomePage } from "components/HomePage/HomePage";
-import { Footer } from "components/Footer/Footer";
-import { PageBackground } from "components/PageBackground/PageBackground";
-import { PageTransition } from "components/PageTransition/PageTransition";
-import { About } from "components/About/About";
-import { Alphabet } from "components/Alphabet/Alphabet";
-import { LetterExposition } from "components/LetterExposition/LetterExposition";
-import { GenomeFont } from "components/GenomeFont/GenomeFont";
+import { Header } from "@/components/Header/Header";
+import { HomePage } from "@/components/HomePage/HomePage";
+import { Footer } from "@/components/Footer/Footer";
+import { PageBackground } from "@/components/PageBackground/PageBackground";
+import { PageTransition } from "@/components/PageTransition/PageTransition";
+import { About } from "@/components/About/About";
+import { Alphabet } from "@/components/Alphabet/Alphabet";
+import { LetterExposition } from "@/components/LetterExposition/LetterExposition";
+import { GenomeFont } from "@/components/GenomeFont/GenomeFont";
 
-import { PATH } from "constants/paths";
-import { LanguageType } from "constants/language";
+import { PATH } from "@/constants/paths";
+import { LanguageType } from "@/constants/language";
 
 import styles from "./App.module.scss";
 
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <PageBackground isHomePage={isHomePage}>
         <Header isHomePage={isHomePage} />
         <div className={isHomePage ? styles["home-page-section"] : styles.section}>
-          <Switch>
+           <Switch>
             <Route path={PATH.HOME} exact={true}>
               <HomePage />
             </Route>

@@ -1,4 +1,4 @@
-import { SvgLetterConfig } from "models/letter-config";
+import { SvgLetterConfig } from "@/models/letter-config";
 
 export const SVG_LETTERS: SvgLetterConfig[] = [
   {
