@@ -50,8 +50,6 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: List output files
-        run: ls -l
 
   # Deploy job
   deploy:
@@ -62,22 +60,21 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
           path: dist
-      - name: List output files
-        run: ls -l
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist repository
           path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
