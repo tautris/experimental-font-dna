@@ -20,16 +20,16 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
-    "react-spring": "^9.1.2",
-    "sass": "^1.69.7"
+    "react-spring": "^9.7.3",
+    "sass": "^1.70.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.4",
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
     "@types/react-router-dom": "^5.1.7",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
@@ -37,6 +37,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
-    "vite": "^5.0.12"
+    "vite": "^5.1.1"
   }
 }
