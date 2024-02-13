@@ -10,9 +10,7 @@ interface Props {
 
 const PageBackground: React.FC<Props> = ({ isHomePage, children }) => (
   <div className={classNames(isHomePage ? styles.black : styles.gradient)}>
-    <div className={styles.background}>
-      {children}
-      </div>
+    <div className={styles.background}>{children}</div>
   </div>
 );
 

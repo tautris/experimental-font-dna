@@ -51,7 +51,7 @@ const Alphabet: React.FC = () => {
         clearTimeout(timeoutRef.current);
       }
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
   const transitions = useTransition(letters, {

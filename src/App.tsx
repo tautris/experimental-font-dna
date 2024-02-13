@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <PageBackground isHomePage={isHomePage}>
         <Header isHomePage={isHomePage} />
         <div className={isHomePage ? styles["home-page-section"] : styles.section}>
-           <Switch>
+          <Switch>
             <Route path={PATH.HOME} exact={true}>
               <HomePage />
             </Route>

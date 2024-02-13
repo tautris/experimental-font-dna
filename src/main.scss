@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "Genomas";
-  src: url("assets/fonts/Genomas.woff2") format("woff2"), url("assets/fonts/Genomas.woff") format("woff");
+  src:
+    url("assets/fonts/Genomas.woff2") format("woff2"),
+    url("assets/fonts/Genomas.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;

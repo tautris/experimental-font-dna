@@ -38,7 +38,7 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
       to: { dash: offset },
       config: { duration: 2000 },
     })),
-    [offsets]
+    [offsets],
   );
 
   const [fillSprings] = useSprings(
@@ -51,7 +51,7 @@ const LetterExpositionContent: React.FC<Props> = ({ letterConfig }) => {
       config: { duration: 2000 },
       delay: 1000,
     })),
-    []
+    [],
   );
 
   const { opacity: mutationOpacity } = useSpring({
