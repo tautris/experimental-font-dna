@@ -36,17 +36,17 @@ const App: React.FC = () => {
             <Route path={PATH.ALPHABET_WITH_LANGUAGE}>
               <Alphabet />
             </Route>
+            <Route
+              path={PATH.ALPHABET}
+              render={() => <Redirect to={generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: LanguageType.LT })} />}
+            />
             <Route path={PATH.GENOME_FONT}>
               <GenomeFont />
             </Route>
             <Route path={PATH.ABOUT}>
               <About />
             </Route>
-            <Redirect
-              path={PATH.ALPHABET}
-              to={generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: LanguageType.LT })}
-            />
-            <Redirect to={PATH.HOME} />
+            <Route render={() => <Redirect to={PATH.HOME} />} />
           </Switch>
         </div>
         {!isHomePage && <Footer />}
