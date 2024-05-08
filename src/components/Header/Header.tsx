@@ -18,6 +18,7 @@ const Header: React.FC<Props> = ({ isHomePage }) => {
       path: PATH.HOME,
       text: "Pagrindinis",
     },
+    // TODO: this created a loop when clicking browser back, could be improved
     {
       path: PATH.ALPHABET,
       text: "Abėcelė",
