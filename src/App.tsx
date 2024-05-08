@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect, useLocation, generatePath } from "react-router-dom";
+import { Route, useLocation, generatePath, Routes, Navigate } from "react-router-dom";
 
 import { Header } from "@/components/Header/Header";
 import { HomePage } from "@/components/HomePage/HomePage";
@@ -26,28 +26,19 @@ const App: React.FC = () => {
       <PageBackground isHomePage={isHomePage}>
         <Header isHomePage={isHomePage} />
         <div className={isHomePage ? styles["home-page-section"] : styles.section}>
-          <Switch>
-            <Route path={PATH.HOME} exact={true}>
-              <HomePage />
-            </Route>
-            <Route path={PATH.LETTER}>
-              <LetterExposition />
-            </Route>
-            <Route path={PATH.ALPHABET_WITH_LANGUAGE}>
-              <Alphabet />
-            </Route>
+          <Routes>
+            {/*TODO: Nest properly according to new react router standard */}
+            <Route path={PATH.HOME} element={<HomePage />} />
+            <Route path={PATH.LETTER} element={<LetterExposition />}></Route>
+            <Route path={PATH.ALPHABET_WITH_LANGUAGE} element={<Alphabet />}></Route>
             <Route
               path={PATH.ALPHABET}
-              render={() => <Redirect to={generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: LanguageType.LT })} />}
+              element={<Navigate to={generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: LanguageType.LT })} />}
             />
-            <Route path={PATH.GENOME_FONT}>
-              <GenomeFont />
-            </Route>
-            <Route path={PATH.ABOUT}>
-              <About />
-            </Route>
-            <Route render={() => <Redirect to={PATH.HOME} />} />
-          </Switch>
+            <Route path={PATH.GENOME_FONT} element={<GenomeFont />}></Route>
+            <Route path={PATH.ABOUT} element={<About />}></Route>
+            <Route element={<Navigate to={PATH.HOME} />} />
+          </Routes>
         </div>
         {!isHomePage && <Footer />}
       </PageBackground>

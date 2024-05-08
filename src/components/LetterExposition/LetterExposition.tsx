@@ -10,13 +10,13 @@ import { LetterExpositionContent } from "./LetterExpositionContent";
 
 import styles from "./LetterExposition.module.scss";
 
-interface UrlParams {
+type UrlParams = {
   language: LanguageType;
   letter: string;
-}
+};
 
 const LetterExposition: React.FC = () => {
-  const { language, letter } = useParams<UrlParams>();
+  const { language, letter } = useParams<UrlParams>() as UrlParams;
 
   const letterConfig = SVG_LETTERS.find((letterConfig) => letterConfig.letter === letter);
 
@@ -34,8 +34,8 @@ const LetterExposition: React.FC = () => {
         <Link
           to={{
             pathname: generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language }),
-            state: { isWithoutAnimation: true },
           }}
+          state={{ isWithoutAnimation: true }}
           className={styles["alphabet-link"]}
         >
           &#8249; į abėcelę

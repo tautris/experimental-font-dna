@@ -1,5 +1,5 @@
 import React from "react";
-import { generatePath, Link, useHistory, useLocation, useParams } from "react-router-dom";
+import { generatePath, Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import classNames from "classnames";
 
@@ -29,14 +29,15 @@ interface LocationState {
   isWithoutAnimation: boolean;
 }
 
-interface UrlParams {
+type UrlParams = {
   language: LanguageType;
-}
+};
 
 const Alphabet: React.FC = () => {
-  const { state } = useLocation<LocationState>();
-  const { language } = useParams<UrlParams>();
-  const history = useHistory();
+  const location = useLocation();
+  const locationState = location.state as LocationState | undefined;
+  const { language } = useParams<UrlParams>() as UrlParams;
+  const navigate = useNavigate();
 
   const [letters, setLetters] = React.useState<SvgLetterConfig[]>([]);
 
@@ -77,10 +78,10 @@ const Alphabet: React.FC = () => {
   };
 
   const handleLanguageChange = (value: string) => {
-    history.replace(generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: value }));
+    navigate(generatePath(PATH.ALPHABET_WITH_LANGUAGE, { language: value }));
   };
 
-  const isWithoutAnimation = state?.isWithoutAnimation;
+  const isWithoutAnimation = locationState?.isWithoutAnimation;
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Link, matchPath, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { PATH } from "@/constants/paths";
 
@@ -13,13 +13,10 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ isHomePage }) => {
-  const { pathname } = useLocation();
-
   const HEADER_ITEMS = [
     {
       path: PATH.HOME,
       text: "Pagrindinis",
-      isExact: true,
     },
     {
       path: PATH.ALPHABET,
@@ -37,13 +34,15 @@ const Header: React.FC<Props> = ({ isHomePage }) => {
 
   return (
     <nav className={classNames(isHomePage ? styles.header : styles.header)}>
-      {HEADER_ITEMS.map(({ path, text, isExact }) => {
-        const isActive = matchPath(pathname, { path, exact: isExact });
-
+      {HEADER_ITEMS.map(({ path, text }) => {
         return (
-          <Link key={path} to={path} className={classNames(styles.item, isActive && styles.active)}>
+          <NavLink
+            key={path}
+            to={path}
+            className={({ isActive }) => classNames(styles.item, isActive && styles.active)}
+          >
             {text}
-          </Link>
+          </NavLink>
         );
       })}
     </nav>

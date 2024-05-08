@@ -9,4 +9,4 @@ export const PATH = {
   LETTER: `/${SLUGS.ALPHABET}/:language/:letter`,
   GENOME_FONT: "/genomo-sriftas",
   ABOUT: "/apie",
-};
+} as const;
