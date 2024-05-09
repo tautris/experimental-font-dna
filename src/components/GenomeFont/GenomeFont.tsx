@@ -47,7 +47,6 @@ const FONT_SIZE_OPTIONS = [
   { value: "48px", label: "Mažas" },
   { value: "65px", label: "Normalus" },
   { value: "105px", label: "Didelis" },
-  { value: "140px", label: "Milžiniškas" },
 ];
 
 const GenomeFont: React.FC = () => {
