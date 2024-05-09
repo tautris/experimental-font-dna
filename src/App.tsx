@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
   return (
     <PageTransition>
-      <PageBackground isHomePage={isHomePage}>
+      <PageBackground>
         <Header isHomePage={isHomePage} />
         <div className={isHomePage ? styles["home-page-section"] : styles.section}>
           <Routes>
