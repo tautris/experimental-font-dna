@@ -43,10 +43,11 @@ import ž from "@/assets/images/letter-anatomy/ž.png";
 // import genomasFont from "@/assets/fonts/Genomas.zip";
 
 const FONT_SIZE_OPTIONS = [
-  { value: "24px", label: "Mažiukas" },
+  { value: "24px", label: "Mažiausias" },
   { value: "48px", label: "Mažas" },
   { value: "65px", label: "Normalus" },
   { value: "105px", label: "Didelis" },
+  { value: "140px", label: "Didžiausias" },
 ];
 
 const GenomeFont: React.FC = () => {
