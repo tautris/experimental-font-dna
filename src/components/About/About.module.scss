@@ -63,4 +63,15 @@
       display: block;
     }
   }
+
+  .contacts {
+    margin-top: $spacer-xl;
+    font-size: 13px;
+    color: $color-white;
+
+    .email {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }

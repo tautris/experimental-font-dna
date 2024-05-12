@@ -44,6 +44,11 @@ const About: React.FC = () => {
           panaudojimą ir jo analizavimo procesą, kurio metu galima apsvarstyti, kokią įtaką šriftas daro žmogui ir kokią
           įtaką žmogus daro šriftui.
         </p>
+        <address className={styles.contacts}>
+          <a href="mailto:eksperimentiniosriftodnr@gmail.com" className={styles.email}>
+            eksperimentiniosriftodnr@gmail.com
+          </a>
+        </address>
       </div>
       <div className={styles["image-container"]}>
         <img src={dnaChainImage} alt="DNA chain" />
