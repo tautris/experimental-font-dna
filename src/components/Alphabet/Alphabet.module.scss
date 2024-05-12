@@ -1,4 +1,5 @@
 @import "@/styles/scss-vars.scss";
+@import "@/styles/mixins.scss";
 
 .language-container {
   display: flex;
@@ -53,23 +54,11 @@
   padding-bottom: 100px;
 
   .title {
-    margin-top: 10px;
+    margin-top: $spacer-l;
     margin-bottom: 0;
-    font-size: 36px;
     font-weight: bold;
-    line-height: 50px;
     text-align: center;
-    color: $color-black;
-
-    @media only screen and (min-width: $breakpoint-mobile) {
-      font-size: 56px;
-      line-height: 70px;
-    }
-
-    @media only screen and (min-width: $breakpoint-desktop) {
-      font-size: 72px;
-      line-height: 86px;
-    }
+    @include section-title;
   }
 
   .subtitle {

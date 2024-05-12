@@ -1,0 +1,17 @@
+@import "@/styles/scss-vars.scss";
+
+@mixin section-title {
+  color: $color-white;
+  font-size: 36px;
+  line-height: 50px;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    font-size: 90px;
+    line-height: 107px;
+  }
+}
