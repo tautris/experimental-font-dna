@@ -1,6 +1,6 @@
 import React from "react";
 
-import dnaImage from "@/assets/images/dna.svg";
+import dnaChainImage from "@/assets/images/dna_chain.svg";
 
 import styles from "./About.module.scss";
 
@@ -46,7 +46,7 @@ const About: React.FC = () => {
         </p>
       </div>
       <div className={styles["image-container"]}>
-        <img src={dnaImage} alt="DNA molecule" className={styles["dna-image"]} />
+        <img src={dnaChainImage} alt="DNA chain" />
       </div>
     </div>
   );

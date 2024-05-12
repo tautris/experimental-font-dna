@@ -2,6 +2,8 @@
 
 .container {
   display: flex;
+  justify-content: space-around;
+  gap: $spacer-xxl;
   padding-top: 20px;
   padding-bottom: $spacer-xxl;
 
@@ -40,14 +42,15 @@
     }
 
     @media only screen and (min-width: $breakpoint-large-desktop) {
-      font-size: 120px;
-      line-height: 143px;
+      font-size: 90px;
+      line-height: 107px;
     }
   }
 
   .paragraph {
     margin: 0;
     font-size: 16px;
+    color: $color-white;
 
     @media only screen and (min-width: $breakpoint-mobile) {
       font-size: 18px;
@@ -64,16 +67,9 @@
 
   .image-container {
     display: none;
-    flex: 1;
 
-    @media only screen and (min-width: 740px) {
+    @media only screen and (min-width: 855px) {
       display: block;
     }
-  }
-
-  .dna-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
