@@ -68,7 +68,7 @@
     font-style: italic;
     line-height: 15px;
     text-align: center;
-    color: $color-black;
+    color: $color-white;
 
     @media only screen and (min-width: $breakpoint-mobile) {
       margin-top: 14px;
@@ -116,7 +116,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
-    color: $color-white;
+    color: $color-yellow;
     margin-top: 0;
     margin-bottom: 0;
 
@@ -150,7 +150,7 @@
   .mutation-description {
     font-size: 14px;
     line-height: 17px;
-    color: $color-black;
+    color: $color-white;
     margin-top: 15px;
     margin-bottom: 0;
 
