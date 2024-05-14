@@ -35,7 +35,7 @@ const About: React.FC = () => {
           apie žmogų, turintį DNR mutacijas. Eksperimentinis šriftas ir žmogaus DNR grandinės mutacijos lyginami
           tarpusavyje, norint aiškiau išreikšti žmogaus požiūrį į eksperimentinį šriftą. Analizuojamas eksperimentinio
           šrifto ir žmogaus DNR grandinės mutacijų atvejų veikimas kaip atskirų reiškinių ir kaip vystosi jų
-          komunikacija tarpusavyje - kaip kaitaliojasi ar papildo vienas kitą. Taip <i>homo sapiens</i> DNR grandinės
+          komunikacija tarpusavyje - kaip kaitaliojasi ar papildo vienas kitą. <i>Homo sapiens</i> DNR grandinės
           mutacijos asimiliuoja su eksperimentiniu šriftu ir taip sukuriamas genomo šriftas.
         </p>
         <p className={paragraphClassName}>
