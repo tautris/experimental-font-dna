@@ -85,11 +85,9 @@
 
   .mutation {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
     margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
 
     &:not(:first-of-type) {
       margin-top: 80px;
@@ -104,8 +102,16 @@
     }
   }
 
-  .mutation-info {
-    flex: 1;
+  .genome-mutations-info {
+    max-width: 520px;
+  }
+
+  .gene-point-mutation-info {
+    max-width: 570px;
+  }
+
+  .environment-mutagens-info {
+    max-width: 685px;
   }
 
   .mutation-header {
@@ -117,8 +123,6 @@
     font-size: 14px;
     line-height: 17px;
     color: $color-yellow;
-    margin-top: 0;
-    margin-bottom: 0;
 
     @media only screen and (min-width: $breakpoint-mobile) {
       font-size: 16px;
@@ -126,24 +130,8 @@
     }
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      flex: 0 0 347px;
-      width: 347px;
       font-size: 18px;
       line-height: 21px;
-    }
-  }
-
-  .mutation-line {
-    display: none;
-    width: 100%;
-    height: 1px;
-    background-color: $color-white;
-    margin-top: 11px;
-    margin-left: 23px;
-    margin-right: 39px;
-
-    @media only screen and (min-width: $breakpoint-desktop) {
-      display: block;
     }
   }
 
@@ -160,45 +148,22 @@
     }
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      width: 397px;
       font-size: 18px;
       line-height: 21px;
     }
   }
 
-  .image {
-    display: none;
+  .image-container {
+    margin-top: 100px;
+    text-align: center;
 
-    @media only screen and (min-width: $breakpoint-desktop) {
-      display: block;
+    .image {
+      width: 100%;
+      height: auto;
+
+      @media only screen and (min-width: $breakpoint-desktop) {
+        width: 85%;
+      }
     }
-  }
-
-  .image-circle {
-    position: relative;
-    width: 263px;
-    height: 263px;
-    background-color: $color-white;
-    border: 5px solid $color-yellow;
-    border-radius: 50%;
-    box-sizing: border-box;
-  }
-
-  .monosomy-image {
-    position: absolute;
-    left: 44px;
-    top: 55px;
-  }
-
-  .trisomy-image {
-    position: absolute;
-    left: 123px;
-    top: 130px;
-  }
-
-  .mutagen-image {
-    position: absolute;
-    left: 30px;
-    top: 14px;
   }
 }

@@ -9,10 +9,9 @@ import { PATH } from "@/constants/paths";
 import { LITHUANIAN_SVG_LETTERS, ENGLISH_SVG_LETTERS } from "@/constants/letters";
 import { SvgLetterConfig } from "@/models/letter-config";
 
-import monosomyImage from "@/assets/images/mutations/monosomy.png";
-import trisomyImage from "@/assets/images/mutations/trisomy.png";
-import pointImage from "@/assets/images/mutations/point.svg";
-import mutagenImage from "@/assets/images/mutations/mutagen.png";
+import genomeMutations from "@/assets/images/mutations/genome_mutations.png";
+import genePointMutation from "@/assets/images/mutations/gene_point_mutation.png";
+import environmentMutagens from "@/assets/images/mutations/environment_mutagens.png";
 
 import styles from "./Alphabet.module.scss";
 import { LanguageType } from "@/constants/language";
@@ -136,12 +135,10 @@ const Alphabet: React.FC = () => {
       <div className={styles.mutations}>
         <h2 className={styles.title}>Mutacijos</h2>
         <p className={styles.subtitle}>Norėdami pamatyti mutaciją, pasirinkite raidę</p>
+
         <div className={styles.mutation}>
-          <div className={styles["mutation-info"]}>
-            <div className={styles["mutation-header"]}>
-              <h3 className={styles["mutation-title"]}>Genomo mutacijos, kitaip vadinamos chromosomų ligos</h3>
-              <div className={styles["mutation-line"]} />
-            </div>
+          <div className={styles["genome-mutations-info"]}>
+            <h3 className={styles["mutation-title"]}>Genomo mutacijos, kitaip vadinamos chromosomų ligos</h3>
             <p className={styles["mutation-description"]}>
               Pakitęs organizmo chromosomų skaičius, kai jų porose gali būti per daug arba per mažai chromosomų.
               Monosomija tai reiškinys kuomet ląstelės branduolys turi tik vieną chromosomų skaičių, kai rinkinyje jų
@@ -149,50 +146,39 @@ const Alphabet: React.FC = () => {
               pasitaikantis 3 chromosomų skaičius.
             </p>
           </div>
-          <div className={styles.image}>
-            <div className={styles["image-circle"]}>
-              <img src={monosomyImage} alt="monosomija" className={styles["monosomy-image"]} />
-              <img src={trisomyImage} alt="trisomija" className={styles["trisomy-image"]} />
-            </div>
+          <div className={styles["image-container"]}>
+            <img src={genomeMutations} alt="monosomija" className={styles.image} loading="lazy" />
           </div>
         </div>
 
         <div className={styles.mutation}>
-          <div className={styles["mutation-info"]}>
-            <div className={styles["mutation-header"]}>
-              <h3 className={styles["mutation-title"]}>Genų taškinė mutacija, kitaip vadinama monogeninėmis ligomis</h3>
-              <div className={styles["mutation-line"]} />
-            </div>
+          <div className={styles["gene-point-mutation-info"]}>
+            <h3 className={styles["mutation-title"]}>Genų taškinė mutacija, kitaip vadinama monogeninėmis ligomis</h3>
             <p className={styles["mutation-description"]}>
-              Taškinė genų mutacija tai atskiro geno pakitimas. Mutacijų atsiradimo metu vyksta DNR grandinės molekulės
+              Taškinė genų mutacija tai atskirų genų pakitimas. Mutacijų atsiradimo metu vyksta DNR grandinės molekulės
               struktūros pokyčiai, kai vieni nukleotidai yra pakeičiami į kitus. Padvigubėja geno fragmentas ar
               nukleotidai.
             </p>
           </div>
-          <div className={styles.image}>
-            <img src={pointImage} alt="taškinė genų mutacija" />
+          <div className={styles["image-container"]}>
+            <img src={genePointMutation} alt="taškinė genų mutacija" className={styles.image} loading="lazy" />
           </div>
         </div>
 
         <div className={styles.mutation}>
-          <div className={styles["mutation-info"]}>
-            <div className={styles["mutation-header"]}>
-              <h3 className={styles["mutation-title"]}>
-                Aplinkos mutagenai, dar kitaip vadinami daugiaveiksmės-kompleksinės ligos
-              </h3>
-              <div className={styles["mutation-line"]} />
-            </div>
+          <div className={styles["environment-mutagens-info"]}>
+            <h3 className={styles["mutation-title"]}>
+              Aplinkos mutagenai, dar kitaip vadinami daugiaveiksmės-kompleksinės ligos
+            </h3>
             <p className={styles["mutation-description"]}>
-              Aplinkos mutagenai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos mutagenas tai esantys veiksniai
-              organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas organizmas yra veikiamas aplinkos
-              sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas, paveikti organizmą neigiamai, arba
-              naudingai.
+              Aplinkos mutagenai - nepaveldimi fenotipo pokyčiai. Mutagenas tai sukėlęs mutaciją veiksnys. Aplinkos
+              mutagenas tai esantys veiksniai organizmų bei žmogaus aplinkoje. Mutacija pasireiškia, kai kintamas
+              organizmas yra veikiamas aplinkos sąlygomis. Mutacinis efektas gali būti nuolatinis arba laikinas,
+              paveikti organizmą neigiamai, arba naudingai.
             </p>
           </div>
-          <div className={styles.image}>
-            <div className={styles["image-circle"]}>
-              <img src={mutagenImage} alt="mutageno mutacija" className={styles["mutagen-image"]} />
-            </div>
+          <div className={styles["image-container"]}>
+            <img src={environmentMutagens} alt="mutageno mutacija" className={styles.image} loading="lazy" />
           </div>
         </div>
       </div>
