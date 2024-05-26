@@ -3,7 +3,6 @@ import { Route, useLocation, generatePath, Routes, Navigate } from "react-router
 
 import { Header } from "@/components/Header/Header";
 import { HomePage } from "@/components/HomePage/HomePage";
-import { PageTransition } from "@/components/PageTransition/PageTransition";
 import { About } from "@/components/About/About";
 import { Alphabet } from "@/components/Alphabet/Alphabet";
 import { LetterExposition } from "@/components/LetterExposition/LetterExposition";
@@ -20,7 +19,7 @@ const App: React.FC = () => {
   const isHomePage = pathname === PATH.HOME;
 
   return (
-    <PageTransition>
+    <>
       <Header isHomePage={isHomePage} />
       <div className={isHomePage ? styles["home-page-section"] : styles.section}>
         <Routes>
@@ -37,7 +36,7 @@ const App: React.FC = () => {
           <Route element={<Navigate to={PATH.HOME} />} />
         </Routes>
       </div>
-    </PageTransition>
+    </>
   );
 };
 
