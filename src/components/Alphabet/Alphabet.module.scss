@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: $spacer-xl;
   margin-top: 100px;
 }
 
@@ -17,7 +18,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: $spacer-l;
   padding-left: 40px;
   padding-right: 40px;
   font-size: 76px;
@@ -54,47 +55,35 @@
   padding-bottom: 100px;
 
   .title {
-    margin-top: $spacer-l;
+    margin-top: 60px;
     margin-bottom: 0;
     font-weight: bold;
     text-align: center;
     @include section-title;
   }
 
-  .subtitle {
-    margin-top: 10px;
+  .explainer {
+    margin-top: $spacer-m;
     margin-bottom: 0;
     font-size: 12px;
     font-style: italic;
     line-height: 15px;
     text-align: center;
     color: $color-white;
-
-    @media only screen and (min-width: $breakpoint-mobile) {
-      margin-top: 14px;
-      font-size: 13px;
-      line-height: 16px;
-    }
-
-    @media only screen and (min-width: $breakpoint-desktop) {
-      margin-top: 17px;
-      font-size: 14px;
-      line-height: 17px;
-    }
   }
 
   .mutation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 40px;
 
     &:not(:first-of-type) {
       margin-top: 80px;
     }
 
     @media only screen and (min-width: $breakpoint-desktop) {
-      margin-top: 140px;
+      margin-top: 60px;
 
       &:not(:first-of-type) {
         margin-top: 180px;

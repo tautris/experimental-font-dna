@@ -133,8 +133,8 @@ const Alphabet: React.FC = () => {
       </div>
 
       <div className={styles.mutations}>
+        <p className={styles.explainer}>Norėdami pamatyti mutaciją, pasirinkite raidę</p>
         <h2 className={styles.title}>Mutacijos</h2>
-        <p className={styles.subtitle}>Norėdami pamatyti mutaciją, pasirinkite raidę</p>
 
         <div className={styles.mutation}>
           <div className={styles["genome-mutations-info"]}>
