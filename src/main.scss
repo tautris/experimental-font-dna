@@ -10,6 +10,10 @@
   text-rendering: optimizeLegibility;
 }
 
+html {
+  background-image: url("@/assets/images/background.png");
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
