@@ -7,9 +7,6 @@ import styles from "./GenomeFont.module.scss";
 import a from "@/assets/images/letter-anatomy/a.png";
 import ą from "@/assets/images/letter-anatomy/ą.png";
 import b from "@/assets/images/letter-anatomy/b.png";
-import a1 from "@/assets/images/letter-anatomy/a1.png";
-import a12 from "@/assets/images/letter-anatomy/a12.png";
-import b1 from "@/assets/images/letter-anatomy/b1.png";
 import c from "@/assets/images/letter-anatomy/c.png";
 import č from "@/assets/images/letter-anatomy/č.png";
 import d from "@/assets/images/letter-anatomy/d.png";
@@ -88,9 +85,6 @@ const GenomeFont: React.FC = () => {
       </div>
 
       <div className={styles["anatomy-image-container"]}>
-        <img src={a1} {...anatomyImageProps} />
-        <img src={a12} {...anatomyImageProps} />
-        <img src={b1} {...anatomyImageProps} />
         <img src={a} {...anatomyImageProps} />
         <img src={ą} {...anatomyImageProps} />
         <img src={b} {...anatomyImageProps} />
