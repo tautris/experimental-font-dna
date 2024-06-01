@@ -3,7 +3,6 @@
 
 .container {
   margin-top: 100px;
-  padding-bottom: 60px;
 
   .section {
     width: 80%;
@@ -63,16 +62,35 @@
     @include section-title;
   }
 
-  .anatomy-image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+  .slider-container {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
 
-  .anatomy-image {
-    max-width: 100%;
-    max-height: 100vh;
+  :global(.slick-prev),
+  :global(.slick-next) {
+    z-index: 1;
+
+    &:before {
+      color: $color-white;
+    }
+  }
+
+  :global(.slick-prev) {
+    left: 40px;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      left: 135px;
+    }
+  }
+
+  :global(.slick-next) {
+    right: 40px;
+
+    @media only screen and (min-width: $breakpoint-mobile) {
+      right: 135px;
+    }
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Slider, { Settings } from "react-slick";
 
 import { RadioInput } from "@/components/RadioInput/RadioInput";
 
@@ -42,6 +43,9 @@ import ž from "@/assets/images/letter-anatomy/ž.png";
 // import downloadIcon from "@/assets/images/download.png";
 // import genomasFont from "@/assets/fonts/Genomas.zip";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const FONT_SIZE_OPTIONS = [
   { value: "24px", label: "Mažiausias" },
   { value: "48px", label: "Mažas" },
@@ -50,12 +54,23 @@ const FONT_SIZE_OPTIONS = [
   { value: "140px", label: "Didžiausias" },
 ];
 
+const SLIDER_SETTINGS: Settings = {
+  // TODO: try out
+  //  adaptiveHeight
+  //  centerMode
+  //  centerPadding
+  //  easing
+  //  fade
+  //  easing
+  //  lazyLoad
+  arrows: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
 const GenomeFont: React.FC = () => {
   const [fontSize, setFontSize] = React.useState<string>("48px");
-
-  const anatomyImageProps: Partial<React.ImgHTMLAttributes<HTMLImageElement>> = {
-    className: styles["anatomy-image"],
-  };
 
   return (
     <div className={styles.container}>
@@ -84,42 +99,44 @@ const GenomeFont: React.FC = () => {
         <h1 className={styles["anatomy-title"]}>Raidžių anatomija</h1>
       </div>
 
-      <div className={styles["anatomy-image-container"]}>
-        <img src={a} {...anatomyImageProps} />
-        <img src={ą} {...anatomyImageProps} />
-        <img src={b} {...anatomyImageProps} />
-        <img src={c} {...anatomyImageProps} />
-        <img src={č} {...anatomyImageProps} />
-        <img src={d} {...anatomyImageProps} />
-        <img src={e} {...anatomyImageProps} />
-        <img src={ę} {...anatomyImageProps} />
-        <img src={ė} {...anatomyImageProps} />
-        <img src={f} {...anatomyImageProps} />
-        <img src={g} {...anatomyImageProps} />
-        <img src={h} {...anatomyImageProps} />
-        <img src={i} {...anatomyImageProps} />
-        <img src={į} {...anatomyImageProps} />
-        <img src={j} {...anatomyImageProps} />
-        <img src={k} {...anatomyImageProps} />
-        <img src={l} {...anatomyImageProps} />
-        <img src={m} {...anatomyImageProps} />
-        <img src={n} {...anatomyImageProps} />
-        <img src={o} {...anatomyImageProps} />
-        <img src={p} {...anatomyImageProps} />
-        <img src={q} {...anatomyImageProps} />
-        <img src={r} {...anatomyImageProps} />
-        <img src={s} {...anatomyImageProps} />
-        <img src={š} {...anatomyImageProps} />
-        <img src={t} {...anatomyImageProps} />
-        <img src={u} {...anatomyImageProps} />
-        <img src={ū} {...anatomyImageProps} />
-        <img src={ų} {...anatomyImageProps} />
-        <img src={v} {...anatomyImageProps} />
-        <img src={w} {...anatomyImageProps} />
-        <img src={x} {...anatomyImageProps} />
-        <img src={y} {...anatomyImageProps} />
-        <img src={z} {...anatomyImageProps} />
-        <img src={ž} {...anatomyImageProps} />
+      <div className={styles["slider-container"]}>
+        <Slider {...SLIDER_SETTINGS}>
+          <img src={a} />
+          <img src={ą} />
+          <img src={b} />
+          <img src={c} />
+          <img src={č} />
+          <img src={d} />
+          <img src={e} />
+          <img src={ę} />
+          <img src={ė} />
+          <img src={f} />
+          <img src={g} />
+          <img src={h} />
+          <img src={i} />
+          <img src={į} />
+          <img src={j} />
+          <img src={k} />
+          <img src={l} />
+          <img src={m} />
+          <img src={n} />
+          <img src={o} />
+          <img src={p} />
+          <img src={q} />
+          <img src={r} />
+          <img src={s} />
+          <img src={š} />
+          <img src={t} />
+          <img src={u} />
+          <img src={ū} />
+          <img src={ų} />
+          <img src={v} />
+          <img src={w} />
+          <img src={x} />
+          <img src={y} />
+          <img src={z} />
+          <img src={ž} />
+        </Slider>
       </div>
     </div>
   );

@@ -16,12 +16,15 @@
     "format:fix": "yarn format --write"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
     "classnames": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
+    "react-slick": "^0.30.2",
     "react-spring": "^9.7.3",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
