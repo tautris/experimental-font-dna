@@ -55,14 +55,6 @@ const FONT_SIZE_OPTIONS = [
 ];
 
 const SLIDER_SETTINGS: Settings = {
-  // TODO: try out
-  //  adaptiveHeight
-  //  centerMode
-  //  centerPadding
-  //  easing
-  //  fade
-  //  easing
-  //  lazyLoad
   arrows: true,
   infinite: true,
   slidesToShow: 1,

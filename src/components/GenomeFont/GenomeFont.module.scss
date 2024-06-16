@@ -63,9 +63,21 @@
   }
 
   .slider-container {
+    margin-top: 72px;
+
     @media only screen and (min-width: $breakpoint-desktop) {
       padding-left: 60px;
       padding-right: 60px;
+    }
+
+    @media only screen and (min-width: $breakpoint-large-desktop) {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    @media only screen and (min-width: $breakpoint-extra-large-desktop) {
+      padding-left: 260px;
+      padding-right: 260px;
     }
   }
 
