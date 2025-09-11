@@ -26,7 +26,7 @@ const LetterExposition: React.FC = () => {
 
   return (
     <div>
-      <LetterExpositionContent letterConfig={letterConfig} />
+      <LetterExpositionContent key={letterConfig.letter} letterConfig={letterConfig} />
       <div className={styles.navigation}>
         <div className={styles["alphabet-navigation"]}>
           <AlphabetNavigation selectedLetter={letterConfig.letter} language={language} />
